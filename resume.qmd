@@ -1,89 +1,76 @@
----
-layout: cv
-title: Isaac Newtons's CV
----
-# Isaac Newton
-Physicist, Mathematician, Cambridge professor.
+# Juan Zurita
+Computer Science Student at Brigham Young University - Idaho | Online TA for WDD 230
 
 <div id="webaddress">
-<a href="isaac@applesdofall.org">isaac@applesdofall.org</a>
-| <a href="http://en.wikipedia.org/wiki/Isaac_Newton">My wikipedia page</a>
+<a href="mailto:juanzurita@byui.edu">juanzurita@byui.edu</a>
+| <a href="https://github.com/juan-zv">My GitHub page</a>
 </div>
+
 
 
 ## Currently
 
-Standing on the shoulders of giants
+**Online Teacher Assistant for WDD 230**  
+Rexburg, ID | Brigham Young University-Idaho    `Apr 2023-Present`
+- Provide guidance and support to students in a web development class focused on HTML, CSS, and JavaScript.
+- Demonstrate proficiency in creating responsive, well-designed, and interactive web pages using HTML, CSS, and JavaScript.
+- Assist students in understanding and implementing web development concepts, troubleshoot coding issues, and contribute to a collaborative learning environment.
 
-### Specialized in
-
-Laws of motion, gravitation, minting coins, disliking [Robert Hooke](http://en.wikipedia.org/wiki/Robert_Hooke)
-
-
-### Research interests
-
-Cooling, power series, optics, alchemy, planetary motions, apples.
 
 
 ## Education
 
-`1654-1660`
-__The King's School, Grantham.__
+**Brigham Young University-Idaho**  
+Rexburg, ID  
+Bachelor of Science Computer Science  
+Expected Graduation Date: __Dec 2025__
+- Coursework: Web Frontend I, Introduction to Databases, Applied Programming, etc.
+- OOP, Database handling, Optimization, Web Development.
+- GPA __3.65/4.0__
 
-`June 1661 - now`
-__Trinity College, Cambridge__
-
-- Sizar
-
-`1667 - death`
-__Trinity College, Cambridge__
-
-- Fellow
-
-
-
-## Awards
-
-`2012`
-President, *Royal Society*, London, UK
-
-Associate, *French Academy of Science*, Paris, France
+**Certificate of Computer Programming**    `Aug 2023`
+- Coursework: Algorithm Design, Data Structures, Object Oriented Programming, Work Methodology.
+- Certificate designed to specifically prepare students for an internship or full-time position.
+- Emphasis in Science and Technology.
 
 
 
-## Publications
-
-<!-- A list is also available [online](http://scholar.google.co.uk/citations?user=LTOTl0YAAAAJ) -->
-
-### Journals
-
-`1669`
-Newton Sir I, De analysi per æquationes numero terminorum infinitas. 
-
-`1669`
-Lectiones opticæ.
-
-etc. etc. etc.
-
-### Patents
-
-`2012`
-Infinitesimal calculus for solutions to physics problems, [SMBC](http://www.techdirt.com/articles/20121011/09312820678/if-patents-had-been-around-time-newton.shtml) patent 001
+## Experience
 
 
-## Occupation
+**International Services Processor**  
+Rexburg, ID | Brigham Young University-Idaho    `Nov 2022-Aug 2023`
+- Efficiently handle walk-ins, phone calls, and emails, providing information and directing visitors to appropriate departments.
+- Assist students with administrative processes and immigration-related questions, offering guidance and facilitating necessary paperwork.
+- Maintain organized records, schedule appointments, and perform general administrative tasks with attention to detail and multitasking abilities.
 
-`1600`
-__Royal Mint__, London
+### Volunteer Service
 
-- Warden
-- Minted coins
+**Full-time Volunteer Representative**  
+Santa Cruz, Bolivia | The Church of Jesus Christ of Latter-day Saints    `Jan 2020-Jan 2022`
+- Taught English as a second language for groups of 5-10 people.
+- Planned flights and trips for other volunteers as an executive secretary for the Mission.
+- Conducted weekly training meetings to establish goals in order to fulfill working requisites.
+- Led and trained other volunteers as trainer, district leader, zone leader.
 
-`1600`
-__Lucasian professor of Mathematics__, Cambridge University
+
+
+## Personal Projects
+
+- **Juan Zurita Portfolio**: Static web page designed to showcase my projects and provide a professional bio.
+- **U&I Ride**: Mobile app concept aimed at optimizing ride-sharing services in the Rexburg – Utah area.
+- **Estudio + Fe**: Web application focused on enhancing scripture cross-referencing and note-taking capabilities for a wider audience.
+
+## Skills and Interests
+
+- Proficient in SCRUM methodologies and Git version control.
+- Skilled in Firebase, Flutter, React, and React Native for backend, mobile, and web development.
+- Experienced in C#, Python, SQL, Kotlin, Android development.
+- Familiar with Rust for systems programming.
+- Currently learning Sass for CSS preprocessing, and iOS development.
 
 
 
 <!-- ### Footer
 
-Last updated: May 2013 -->
+Last updated: Apr 2024 -->

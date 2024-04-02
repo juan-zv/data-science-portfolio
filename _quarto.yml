@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Juan Zurita Data Science Portfolio"
+  title: "Juan Zurita - Data Science Portfolio"
   favicon: Images/favicon.png
   back-to-top-navigation: true
   repo-url: https://github.com/juan-zv/juan-zv.github.io
@@ -71,6 +71,3 @@ format:
       #dark: [cosmo, theme-dark.scss]
     css: styles.css
     toc: true
-
-
-
