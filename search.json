@@ -46,21 +46,105 @@
     "href": "Cleansing_Projects/project5.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html#elevator-pitch",
+    "href": "Cleansing_Projects/project5.html#elevator-pitch",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html#questiontask-1",
+    "href": "Cleansing_Projects/project5.html#questiontask-1",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = (df.head(1000)\n    .groupby('year')\n    .sum()\n    .reset_index()\n    .tail(10)\n    .filter([\"year\", \"AK\",\"AR\"])\n)\ndisplay(mydat)\n\n\n\n\n\n\n\nNot much of a table {#cell-Q1-table}\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html#questiontask-2",
+    "href": "Cleansing_Projects/project5.html#questiontask-2",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html#questiontask-3",
+    "href": "Cleansing_Projects/project5.html#questiontask-3",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
   },
   {
     "objectID": "Cleansing_Projects/project3.html",
     "href": "Cleansing_Projects/project3.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html#elevator-pitch",
+    "href": "Cleansing_Projects/project3.html#elevator-pitch",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html#questiontask-1",
+    "href": "Cleansing_Projects/project3.html#questiontask-1",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = (df.head(1000)\n    .groupby('year')\n    .sum()\n    .reset_index()\n    .tail(10)\n    .filter([\"year\", \"AK\",\"AR\"])\n)\ndisplay(mydat)\n\n\n\n\n\n\n\nNot much of a table {#cell-Q1-table}\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html#questiontask-2",
+    "href": "Cleansing_Projects/project3.html#questiontask-2",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html#questiontask-3",
+    "href": "Cleansing_Projects/project3.html#questiontask-3",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
   },
   {
     "objectID": "Cleansing_Projects/project4.html",
     "href": "Cleansing_Projects/project4.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#elevator-pitch",
+    "href": "Cleansing_Projects/project4.html#elevator-pitch",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#questiontask-1",
+    "href": "Cleansing_Projects/project4.html#questiontask-1",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = (df.head(1000)\n    .groupby('year')\n    .sum()\n    .reset_index()\n    .tail(10)\n    .filter([\"year\", \"AK\",\"AR\"])\n)\ndisplay(mydat)\n\n\n\n\n\n\n\nNot much of a table {#cell-Q1-table}\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#questiontask-2",
+    "href": "Cleansing_Projects/project4.html#questiontask-2",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#questiontask-3",
+    "href": "Cleansing_Projects/project4.html#questiontask-3",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
   },
   {
     "objectID": "cleansing.html",
@@ -95,14 +179,70 @@
     "href": "Cleansing_Projects/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html#elevator-pitch",
+    "href": "Cleansing_Projects/project2.html#elevator-pitch",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html#questiontask-1",
+    "href": "Cleansing_Projects/project2.html#questiontask-1",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = (df.head(1000)\n    .groupby('year')\n    .sum()\n    .reset_index()\n    .tail(10)\n    .filter([\"year\", \"AK\",\"AR\"])\n)\ndisplay(mydat)\n\n\n\n\n\n\n\nNot much of a table {#cell-Q1-table}\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html#questiontask-2",
+    "href": "Cleansing_Projects/project2.html#questiontask-2",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html#questiontask-3",
+    "href": "Cleansing_Projects/project2.html#questiontask-3",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
   },
   {
     "objectID": "Cleansing_Projects/project1.html",
     "href": "Cleansing_Projects/project1.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#elevator-pitch",
+    "href": "Cleansing_Projects/project1.html#elevator-pitch",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#questiontask-1",
+    "href": "Cleansing_Projects/project1.html#questiontask-1",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = (df.head(1000)\n    .groupby('year')\n    .sum()\n    .reset_index()\n    .tail(10)\n    .filter([\"year\", \"AK\",\"AR\"])\n)\ndisplay(mydat)\n\n\n\n\n\n\n\nNot much of a table {#cell-Q1-table}\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#questiontask-2",
+    "href": "Cleansing_Projects/project1.html#questiontask-2",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#questiontask-3",
+    "href": "Cleansing_Projects/project1.html#questiontask-3",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
   },
   {
     "objectID": "competition.html",
@@ -137,28 +277,28 @@
     "href": "resume.html",
     "title": "Juan Zurita",
     "section": "",
-    "text": "Computer Science Student at Brigham Young University - Idaho | Online TA for WDD 230\n\njuanzurita@byui.edu | My GitHub page\n\n\n\nOnline Teacher Assistant for WDD 230\nRexburg, ID | Brigham Young University-Idaho Apr 2023-Present - Provide guidance and support to students in a web development class focused on HTML, CSS, and JavaScript. - Demonstrate proficiency in creating responsive, well-designed, and interactive web pages using HTML, CSS, and JavaScript. - Assist students in understanding and implementing web development concepts, troubleshoot coding issues, and contribute to a collaborative learning environment.\n\n\n\nBrigham Young University-Idaho\nRexburg, ID\nBachelor of Science Computer Science\nExpected Graduation Date: Dec 2025 - Coursework: Web Frontend I, Introduction to Databases, Applied Programming, etc. - OOP, Database handling, Optimization, Web Development. - GPA 3.65/4.0\nCertificate of Computer Programming Aug 2023 - Coursework: Algorithm Design, Data Structures, Object Oriented Programming, Work Methodology. - Certificate designed to specifically prepare students for an internship or full-time position. - Emphasis in Science and Technology.\n\n\n\nInternational Services Processor\nRexburg, ID | Brigham Young University-Idaho Nov 2022-Aug 2023 - Efficiently handle walk-ins, phone calls, and emails, providing information and directing visitors to appropriate departments. - Assist students with administrative processes and immigration-related questions, offering guidance and facilitating necessary paperwork. - Maintain organized records, schedule appointments, and perform general administrative tasks with attention to detail and multitasking abilities.\n\n\nFull-time Volunteer Representative\nSanta Cruz, Bolivia | The Church of Jesus Christ of Latter-day Saints Jan 2020-Jan 2022 - Taught English as a second language for groups of 5-10 people. - Planned flights and trips for other volunteers as an executive secretary for the Mission. - Conducted weekly training meetings to establish goals in order to fulfill working requisites. - Led and trained other volunteers as trainer, district leader, zone leader.\n\n\n\n\n\nJuan Zurita Portfolio: Static web page designed to showcase my projects and provide a professional bio.\nU&I Ride: Mobile app concept aimed at optimizing ride-sharing services in the Rexburg – Utah area.\nEstudio + Fe: Web application focused on enhancing scripture cross-referencing and note-taking capabilities for a wider audience.\n\n\n\n\n\nProficient in SCRUM methodologies and Git version control.\nSkilled in Firebase, Flutter, React, and React Native for backend, mobile, and web development.\nExperienced in C#, Python, SQL, Kotlin, Android development.\nFamiliar with Rust for systems programming.\nCurrently learning Sass for CSS preprocessing, and iOS development."
+    "text": "Computer Science Student at Brigham Young University - Idaho | Online TA for WDD 230\n\njuanzurita@byui.edu | My GitHub page\n\n\n\nOnline Teacher Assistant for WDD 230\nRexburg, ID | Brigham Young University-Idaho Apr 2023-Present\n\nProvide guidance and support to students in a web development class focused on HTML, CSS, and JavaScript.\nDemonstrate proficiency in creating responsive, well-designed, and interactive web pages using HTML, CSS, and JavaScript.\nAssist students in understanding and implementing web development concepts, troubleshoot coding issues, and contribute to a collaborative learning environment.\n\n\n\n\nBrigham Young University-Idaho\nRexburg, ID\nBachelor of Science Computer Science\nExpected Graduation Date: Dec 2025\n\nCoursework: Web Frontend I, Introduction to Databases, Applied Programming, etc.\nOOP, Database handling, Optimization, Web Development.\nGPA 3.65/4.0\n\nCertificate of Computer Programming Aug 2023\n\nCoursework: Algorithm Design, Data Structures, Object Oriented Programming, Work Methodology.\nCertificate designed to specifically prepare students for an internship or full-time position.\nEmphasis in Science and Technology.\n\n\n\n\nInternational Services Processor\nRexburg, ID | Brigham Young University-Idaho Nov 2022-Aug 2023\n\nEfficiently handle walk-ins, phone calls, and emails, providing information and directing visitors to appropriate departments.\nAssist students with administrative processes and immigration-related questions, offering guidance and facilitating necessary paperwork.\nMaintain organized records, schedule appointments, and perform general administrative tasks with attention to detail and multitasking abilities.\n\n\n\nFull-time Volunteer Representative\nSanta Cruz, Bolivia | The Church of Jesus Christ of Latter-day Saints Jan 2020-Jan 2022\n\nTaught English as a second language for groups of 5-10 people.\nPlanned flights and trips for other volunteers as an executive secretary for the Mission.\nConducted weekly training meetings to establish goals in order to fulfill working requisites.\nLed and trained other volunteers as trainer, district leader, zone leader.\n\n\n\n\n\n\nJuan Zurita Portfolio: Static web page designed to showcase my projects and provide a professional bio.\nU&I Ride: Mobile app concept aimed at optimizing ride-sharing services in the Rexburg – Utah area.\nEstudio + Fe: Web application focused on enhancing scripture cross-referencing and note-taking capabilities for a wider audience.\n\n\n\n\n\nProficient in SCRUM methodologies and Git version control.\nSkilled in Firebase, Flutter, React, and React Native for backend, mobile, and web development.\nExperienced in C#, Python, SQL, Kotlin, Android development.\nFamiliar with Rust for systems programming.\nCurrently learning Sass for CSS preprocessing, and iOS development."
   },
   {
     "objectID": "resume.html#currently",
     "href": "resume.html#currently",
     "title": "Juan Zurita",
     "section": "",
-    "text": "Online Teacher Assistant for WDD 230\nRexburg, ID | Brigham Young University-Idaho Apr 2023-Present - Provide guidance and support to students in a web development class focused on HTML, CSS, and JavaScript. - Demonstrate proficiency in creating responsive, well-designed, and interactive web pages using HTML, CSS, and JavaScript. - Assist students in understanding and implementing web development concepts, troubleshoot coding issues, and contribute to a collaborative learning environment."
+    "text": "Online Teacher Assistant for WDD 230\nRexburg, ID | Brigham Young University-Idaho Apr 2023-Present\n\nProvide guidance and support to students in a web development class focused on HTML, CSS, and JavaScript.\nDemonstrate proficiency in creating responsive, well-designed, and interactive web pages using HTML, CSS, and JavaScript.\nAssist students in understanding and implementing web development concepts, troubleshoot coding issues, and contribute to a collaborative learning environment."
   },
   {
     "objectID": "resume.html#education",
     "href": "resume.html#education",
     "title": "Juan Zurita",
     "section": "",
-    "text": "Brigham Young University-Idaho\nRexburg, ID\nBachelor of Science Computer Science\nExpected Graduation Date: Dec 2025 - Coursework: Web Frontend I, Introduction to Databases, Applied Programming, etc. - OOP, Database handling, Optimization, Web Development. - GPA 3.65/4.0\nCertificate of Computer Programming Aug 2023 - Coursework: Algorithm Design, Data Structures, Object Oriented Programming, Work Methodology. - Certificate designed to specifically prepare students for an internship or full-time position. - Emphasis in Science and Technology."
+    "text": "Brigham Young University-Idaho\nRexburg, ID\nBachelor of Science Computer Science\nExpected Graduation Date: Dec 2025\n\nCoursework: Web Frontend I, Introduction to Databases, Applied Programming, etc.\nOOP, Database handling, Optimization, Web Development.\nGPA 3.65/4.0\n\nCertificate of Computer Programming Aug 2023\n\nCoursework: Algorithm Design, Data Structures, Object Oriented Programming, Work Methodology.\nCertificate designed to specifically prepare students for an internship or full-time position.\nEmphasis in Science and Technology."
   },
   {
     "objectID": "resume.html#experience",
     "href": "resume.html#experience",
     "title": "Juan Zurita",
     "section": "",
-    "text": "International Services Processor\nRexburg, ID | Brigham Young University-Idaho Nov 2022-Aug 2023 - Efficiently handle walk-ins, phone calls, and emails, providing information and directing visitors to appropriate departments. - Assist students with administrative processes and immigration-related questions, offering guidance and facilitating necessary paperwork. - Maintain organized records, schedule appointments, and perform general administrative tasks with attention to detail and multitasking abilities.\n\n\nFull-time Volunteer Representative\nSanta Cruz, Bolivia | The Church of Jesus Christ of Latter-day Saints Jan 2020-Jan 2022 - Taught English as a second language for groups of 5-10 people. - Planned flights and trips for other volunteers as an executive secretary for the Mission. - Conducted weekly training meetings to establish goals in order to fulfill working requisites. - Led and trained other volunteers as trainer, district leader, zone leader."
+    "text": "International Services Processor\nRexburg, ID | Brigham Young University-Idaho Nov 2022-Aug 2023\n\nEfficiently handle walk-ins, phone calls, and emails, providing information and directing visitors to appropriate departments.\nAssist students with administrative processes and immigration-related questions, offering guidance and facilitating necessary paperwork.\nMaintain organized records, schedule appointments, and perform general administrative tasks with attention to detail and multitasking abilities.\n\n\n\nFull-time Volunteer Representative\nSanta Cruz, Bolivia | The Church of Jesus Christ of Latter-day Saints Jan 2020-Jan 2022\n\nTaught English as a second language for groups of 5-10 people.\nPlanned flights and trips for other volunteers as an executive secretary for the Mission.\nConducted weekly training meetings to establish goals in order to fulfill working requisites.\nLed and trained other volunteers as trainer, district leader, zone leader."
   },
   {
     "objectID": "resume.html#personal-projects",
