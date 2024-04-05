@@ -352,9 +352,9 @@
   {
     "objectID": "Cleansing_Projects/project1.html",
     "href": "Cleansing_Projects/project1.html",
-    "title": "Client Report - [Insert Project Title]",
+    "title": "Client Report - What’s in a name?",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "Analyzing the names_year.csv dataset using Pandas and Plotly Express reveals valuable insights into the evolution of names over time. By plotting the data, we can observe trends in naming preferences and popularity across different years. Key insights include identifying the emergence and decline of certain names, tracking the overall popularity of specific names over time, and potentially uncovering cultural or societal influences on naming trends. Additionally, visualizing the data allows the comparison of naming patterns between genders or regions, providing an understanding of how names have evolved throughout history.\n\n\nRead and format project data\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")"
   },
   {
     "objectID": "Cleansing_Projects/project4.html",
@@ -376,5 +376,40 @@
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#elevator-pitch",
+    "href": "Cleansing_Projects/project1.html#elevator-pitch",
+    "title": "Client Report - What’s in a name?",
+    "section": "",
+    "text": "Analyzing the names_year.csv dataset using Pandas and Plotly Express reveals valuable insights into the evolution of names over time. By plotting the data, we can observe trends in naming preferences and popularity across different years. Key insights include identifying the emergence and decline of certain names, tracking the overall popularity of specific names over time, and potentially uncovering cultural or societal influences on naming trends. Additionally, visualizing the data allows the comparison of naming patterns between genders or regions, providing an understanding of how names have evolved throughout history.\n\n\nRead and format project data\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")"
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#questiontask-1",
+    "href": "Cleansing_Projects/project1.html#questiontask-1",
+    "title": "Client Report - What’s in a name?",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nHow does your name at your birth year compare to its use historically?\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\nJuan = df.query(\"name == 'Juan'\")\n\nchart = px.line(Juan, x='year', y='Total', title='Juan Through Time')\n\nchart.add_vline(x='2001', line_dash=\"dash\", line_color=\"yellow\")\n\nchart.update_layout(xaxis_title='Year', yaxis_title='Total Count')\n\nchart.show()\n\n\n                                                \n\n\ninclude figures in chunks and discuss your findings in the figure."
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#questiontask-2",
+    "href": "Cleansing_Projects/project1.html#questiontask-2",
+    "title": "Client Report - What’s in a name?",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nIf you talked to someone named Brittany on the phone, what is your guess of his or her age? What ages would you not guess?\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\nBrittany = df.query(\"name == 'Brittany'\")\n\nchart2 = px.bar(Brittany, x='year', y='Total', title='Brittany Through Time')\n\nchart2.update_layout(xaxis_title='Year', yaxis_title='Total Count')\n\nchart2.show()\n\n\n                                                \n\n\ninclude figures in chunks and discuss your findings in the figure."
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#questiontask-3",
+    "href": "Cleansing_Projects/project1.html#questiontask-3",
+    "title": "Client Report - What’s in a name?",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nMary, Martha, Peter, and Paul are all Christian names. From 1920 - 2000, compare the name usage of each of the four names. What trends do you notice?\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\nnames = (df\n        .query(\"name in ['Mary','Martha', 'Peter', 'Paul']\")\n        .query(\"year &gt;= 1920 and year &lt;=2000\"))\n\nnames_chart = px.line(names, x='year', y='Total', color = 'name', title='Mary, Martha, Peter and Paul Through Time')\n\nnames_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count', legend_title=' ')\n\nnames_chart.show()\n\n\n                                                \n\n\ninclude figures in chunks and discuss your findings in the figure."
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#questiontask-4",
+    "href": "Cleansing_Projects/project1.html#questiontask-4",
+    "title": "Client Report - What’s in a name?",
+    "section": "QUESTION|TASK 4",
+    "text": "QUESTION|TASK 4\nThink of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\nForrest = df.query(\"name == 'Forrest'\")\n\nchart4 = px.line(Forrest, x='year', y='Total', title='Forrest Through Time')\n\nchart4.add_vline(x='1994', line_dash=\"dash\", line_color=\"yellow\")\n\nchart4.update_layout(xaxis_title='Year', yaxis_title='Total Count')\n\nchart4.show()"
   }
 ]

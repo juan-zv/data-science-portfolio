@@ -1,7 +1,7 @@
 ---
-title: "Client Report - [Insert Project Title]"
+title: "Client Report - What's in a name?"
 subtitle: "Course DS 250"
-author: "[STUDENT NAME]"
+author: "Juan Zurita"
 format:
   html:
     self-contained: true
@@ -36,162 +36,107 @@ import plotly.express as px
 
 ## Elevator pitch
 
-_paste your elevator pitch here_
-_A SHORT (4-5 SENTENCES) PARAGRAPH THAT `DESCRIBES KEY INSIGHTS` TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS._
+__Analyzing the names_year.csv dataset using Pandas and Plotly Express reveals valuable insights into the evolution of names over time. By plotting the data, we can observe trends in naming preferences and popularity across different years. Key insights include identifying the emergence and decline of certain names, tracking the overall popularity of specific names over time, and potentially uncovering cultural or societal influences on naming trends. Additionally, visualizing the data allows the comparison of naming patterns between genders or regions, providing an understanding of how names have evolved throughout history.__
 
 ```{python}
 #| label: project-data
 #| code-summary: Read and format project data
 
-# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html
-
-# Include and execute your code here
 df = pd.read_csv("https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv")
 ```
 
-__Highlight the Questions and Tasks__
+
 
 ## QUESTION|TASK 1
 
-__COPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE__
+__How does your name at your birth year compare to its use historically?__
 
-_type your results and analysis here_
+_Juan is a name used often throughout the years. Its popularity was increasing and was definetiley pupular around the 2001 which is the year I was born. However, after the 2006, we can see a drop in the use of this name._
 
 ```{python}
 #| label: Q1
 #| code-summary: Read and format data
-# Include and execute your code here
 
+Juan = df.query("name == 'Juan'")
 
-```
+chart = px.line(Juan, x='year', y='Total', title='Juan Through Time')
 
-_include figures in chunks and discuss your findings in the figure._
+chart.add_vline(x='2001', line_dash="dash", line_color="yellow")
 
-```{python}
-#| label: Q1-chart
-#| code-summary: plot example
-#| fig-cap: "My useless chart"
-#| fig-align: center
-# Include and execute your code here
-chart = px.bar(df.head(200),
-    x="name", 
-    y="AK"
-)
+chart.update_layout(xaxis_title='Year', yaxis_title='Total Count')
+
 chart.show()
-```
-
-
-```{python}
-#| label: Q1-table
-#| code-summary: table example
-#| tbl-cap: "Not much of a table"
-#| tbl-cap-location: top
-# Include and execute your code here
-mydat = (df.head(1000)
-    .groupby('year')
-    .sum()
-    .reset_index()
-    .tail(10)
-    .filter(["year", "AK","AR"])
-)
-display(mydat)
 
 ```
+
 
 
 ## QUESTION|TASK 2
 
-__COPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE__
+__If you talked to someone named Brittany on the phone, what is your guess of his or her age? What ages would you not guess?__
 
-_type your results and analysis here_
+_My first guess is that Brittany should eb young because that is just what I feel about that name. After analyzing I have realized that she could be between 36-24 years old. This chart shows how many people were named Brittany._
 
 ```{python}
 #| label: Q2
 #| code-summary: Read and format data
 # Include and execute your code here
+Brittany = df.query("name == 'Brittany'")
 
+chart2 = px.bar(Brittany, x='year', y='Total', title='Brittany Through Time')
 
-```
+chart2.update_layout(xaxis_title='Year', yaxis_title='Total Count')
 
-_include figures in chunks and discuss your findings in the figure._
-
-```{python}
-#| label: Q2-chart
-#| code-summary: plot example
-#| fig-cap: "My useless chart"
-#| fig-align: center
-
-# Include and execute your code here
-# chart = px.bar(df.head(200),
-#     x="name", 
-#     y="AK"
-# )
-# chart.show()
+chart2.show()
 
 ```
 
-
-```{python}
-#| label: Q2-table
-#| code-summary: table example
-#| tbl-cap: "Not much of a table"
-#| tbl-cap-location: top
-# Include and execute your code here
-# mydat = df.head(1000)\
-#     .groupby('year')\
-#     .sum()\
-#     .reset_index()\
-#     .tail(10)\
-#     .filter(["year", "AK","AR"])
-
-# display(mydat)
-
-```
 
 
 ## QUESTION|TASK 3
 
-__COPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE__
+__Mary, Martha, Peter, and Paul are all Christian names. From 1920 - 2000, compare the name usage of each of the four names. What trends do you notice?__
 
-_type your results and analysis here_
+_From this analysis I realized that these names are being less used by everyone. Especially after the 50s. Culture is slowly leaving some christian customs behind and this is one of them._
 
 ```{python}
 #| label: Q3
 #| code-summary: Read and format data
 # Include and execute your code here
 
+names = (df
+        .query("name in ['Mary','Martha', 'Peter', 'Paul']")
+        .query("year >= 1920 and year <=2000"))
+
+names_chart = px.line(names, x='year', y='Total', color = 'name', title='Mary, Martha, Peter and Paul Through Time')
+
+names_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count', legend_title=' ')
+
+names_chart.show()
 
 ```
 
-_include figures in chunks and discuss your findings in the figure._
+
+
+## QUESTION|TASK 4
+
+__Think of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?__
+
+_For this question I chose "Forrest" from the movie "Forrest Gump" which came out in 1994. As we see, this movie really impacted society and I can say was a good hit because I really loved it. The movie definetiley had a big impact on the usage of the name and after that year, everyone stopped using it that much._
 
 ```{python}
-#| label: Q3-chart
-#| code-summary: plot example
-#| fig-cap: "My useless chart"
-#| fig-align: center
+#| label: Q4
+#| code-summary: Read and format data
 # Include and execute your code here
-# chart = px.bar(df.head(200),
-#     x="name", 
-#     y="AK"
-# )
-# chart.show()
-```
 
+Forrest = df.query("name == 'Forrest'")
 
-```{python}
-#| label: Q3-table
-#| code-summary: table example
-#| tbl-cap: "Not much of a table"
-#| tbl-cap-location: top
-# Include and execute your code here
-# mydat = df.head(1000)\
-#     .groupby('year')\
-#     .sum()\
-#     .reset_index()\
-#     .tail(10)\
-#     .filter(["year", "AK","AR"])
+chart4 = px.line(Forrest, x='year', y='Total', title='Forrest Through Time')
 
-# display(mydat)
+chart4.add_vline(x='1994', line_dash="dash", line_color="yellow")
+
+chart4.update_layout(xaxis_title='Year', yaxis_title='Total Count')
+
+chart4.show()
 
 ```
