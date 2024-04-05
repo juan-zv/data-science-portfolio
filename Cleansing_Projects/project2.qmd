@@ -151,7 +151,7 @@ df['num_of_delays_late_aircraft'].fillna(delays_mean, inplace=True)
 
 __100% of delayed flights in the Weather category are due to weather__
 ```{python}
-#| label: Q4
+#| label: Q4a
 #| code-summary: Read and format data
 
 df['num_of_delays_weather_total'] = df['num_of_delays_weather']
@@ -160,7 +160,7 @@ df['num_of_delays_weather_total'] = df['num_of_delays_weather']
 
 __30% of all delayed flights in the Late-Arriving category are due to weather.__
 ```{python}
-#| label: Q4
+#| label: Q4b
 #| code-summary: Read and format data
 
 df['num_of_delays_weather_total'] += df['num_of_delays_late_aircraft'] * 0.3
@@ -169,7 +169,7 @@ df['num_of_delays_weather_total'] += df['num_of_delays_late_aircraft'] * 0.3
 
 __From April to August, 40% of delayed flights in the NAS category are due to weather. The rest of the months, the proportion rises to 65%.__
 ```{python}
-#| label: Q4
+#| label: Q4c
 #| code-summary: Read and format data
 
 df.loc[df['month'].isin(['April', 'May', 'June', 'July', 'August']), 'num_of_delays_weather_total'] += df['num_of_delays_nas'] * 0.4

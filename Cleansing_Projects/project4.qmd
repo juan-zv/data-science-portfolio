@@ -63,13 +63,6 @@ _type your results and analysis here_
 #| code-summary: Read and format data
 # Include and execute your code here
 
-classifier_DT = DecisionTreeClassifier(max_depth=11)
-
-
-classifier_DT.fit(X_train, y_train)
-
-
-y_pred = classifier_DT.predict(X_test)
 
 ```
 

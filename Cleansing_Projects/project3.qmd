@@ -92,7 +92,7 @@ __This three-part question requires you to calculate batting average (number of 
 __Write an SQL query that provides playerID, yearID, and batting average for players with at least 1 at bat that year. Sort the table from highest batting average to lowest, and then by playerid alphabetically. Show the top 5 results in your report.__
 
 ```{python}
-#| label: Q2
+#| label: Q2a
 #| code-summary: Read and format data
 
 q2a = '''
@@ -114,7 +114,7 @@ question_2a
 __Use the same query as above, but only include players with at least 10 at bats that year. Print the top 5 results.__
 
 ```{python}
-#| label: Q2
+#| label: Q2b
 #| code-summary: Read and format data
 
 q2b = '''
@@ -136,7 +136,7 @@ question_2b
 __Now calculate the batting average for players over their entire careers (all years combined). Only include players with at least 100 at bats, and print the top 5 results.__
 
 ```{python}
-#| label: Q2
+#| label: Q2c
 #| code-summary: Read and format data
 
 q2c = '''

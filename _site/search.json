@@ -149,23 +149,23 @@
   {
     "objectID": "resume.html",
     "href": "resume.html",
-    "title": "Isaac Newtons’s CV",
+    "title": "Juan Zurita",
     "section": "",
-    "text": "Physicist, Mathematician, Cambridge professor.\n\nisaac@applesdofall.org | My wikipedia page\n\n\n\nStanding on the shoulders of giants\n\n\nLaws of motion, gravitation, minting coins, disliking Robert Hooke\n\n\n\nCooling, power series, optics, alchemy, planetary motions, apples.\n\n\n\n\n1654-1660 The King’s School, Grantham.\nJune 1661 - now Trinity College, Cambridge\n\nSizar\n\n1667 - death Trinity College, Cambridge\n\nFellow\n\n\n\n\n2012 President, Royal Society, London, UK\nAssociate, French Academy of Science, Paris, France\n\n\n\n\n\n\n1669 Newton Sir I, De analysi per æquationes numero terminorum infinitas.\n1669 Lectiones opticæ.\netc. etc. etc.\n\n\n\n2012 Infinitesimal calculus for solutions to physics problems, SMBC patent 001\n\n\n\n\n1600 Royal Mint, London\n\nWarden\nMinted coins\n\n1600 Lucasian professor of Mathematics, Cambridge University"
+    "text": "Computer Science Student at Brigham Young University - Idaho | Online TA for WDD 230\n\njuanzurita@byui.edu | My GitHub page\n\n\n\nOnline Teacher Assistant for WDD 230\nRexburg, ID | Brigham Young University-Idaho Apr 2023-Present\n\nProvide guidance and support to students in a web development class focused on HTML, CSS, and JavaScript.\nDemonstrate proficiency in creating responsive, well-designed, and interactive web pages using HTML, CSS, and JavaScript.\nAssist students in understanding and implementing web development concepts, troubleshoot coding issues, and contribute to a collaborative learning environment.\n\n\n\n\nBrigham Young University-Idaho\nRexburg, ID\nBachelor of Science Computer Science\nExpected Graduation Date: Dec 2025\n\nCoursework: Web Frontend I, Introduction to Databases, Applied Programming, etc.\nOOP, Database handling, Optimization, Web Development.\nGPA 3.65/4.0\n\nCertificate of Computer Programming Aug 2023\n\nCoursework: Algorithm Design, Data Structures, Object Oriented Programming, Work Methodology.\nCertificate designed to specifically prepare students for an internship or full-time position.\nEmphasis in Science and Technology.\n\n\n\n\nInternational Services Processor\nRexburg, ID | Brigham Young University-Idaho Nov 2022-Aug 2023\n\nEfficiently handle walk-ins, phone calls, and emails, providing information and directing visitors to appropriate departments.\nAssist students with administrative processes and immigration-related questions, offering guidance and facilitating necessary paperwork.\nMaintain organized records, schedule appointments, and perform general administrative tasks with attention to detail and multitasking abilities.\n\n\n\nFull-time Volunteer Representative\nSanta Cruz, Bolivia | The Church of Jesus Christ of Latter-day Saints Jan 2020-Jan 2022\n\nTaught English as a second language for groups of 5-10 people.\nPlanned flights and trips for other volunteers as an executive secretary for the Mission.\nConducted weekly training meetings to establish goals in order to fulfill working requisites.\nLed and trained other volunteers as trainer, district leader, zone leader.\n\n\n\n\n\n\nJuan Zurita Portfolio: Static web page designed to showcase my projects and provide a professional bio.\nU&I Ride: Mobile app concept aimed at optimizing ride-sharing services in the Rexburg – Utah area.\nEstudio + Fe: Web application focused on enhancing scripture cross-referencing and note-taking capabilities for a wider audience.\n\n\n\n\n\nProficient in SCRUM methodologies and Git version control.\nSkilled in Firebase, Flutter, React, and React Native for backend, mobile, and web development.\nExperienced in C#, Python, SQL, Kotlin, Android development.\nFamiliar with Rust for systems programming.\nCurrently learning Sass for CSS preprocessing, and iOS development."
   },
   {
     "objectID": "resume.html#currently",
     "href": "resume.html#currently",
-    "title": "Isaac Newtons’s CV",
+    "title": "Juan Zurita",
     "section": "",
-    "text": "Standing on the shoulders of giants\n\n\nLaws of motion, gravitation, minting coins, disliking Robert Hooke\n\n\n\nCooling, power series, optics, alchemy, planetary motions, apples."
+    "text": "Online Teacher Assistant for WDD 230\nRexburg, ID | Brigham Young University-Idaho Apr 2023-Present\n\nProvide guidance and support to students in a web development class focused on HTML, CSS, and JavaScript.\nDemonstrate proficiency in creating responsive, well-designed, and interactive web pages using HTML, CSS, and JavaScript.\nAssist students in understanding and implementing web development concepts, troubleshoot coding issues, and contribute to a collaborative learning environment."
   },
   {
     "objectID": "resume.html#education",
     "href": "resume.html#education",
-    "title": "Isaac Newtons’s CV",
+    "title": "Juan Zurita",
     "section": "",
-    "text": "1654-1660 The King’s School, Grantham.\nJune 1661 - now Trinity College, Cambridge\n\nSizar\n\n1667 - death Trinity College, Cambridge\n\nFellow"
+    "text": "Brigham Young University-Idaho\nRexburg, ID\nBachelor of Science Computer Science\nExpected Graduation Date: Dec 2025\n\nCoursework: Web Frontend I, Introduction to Databases, Applied Programming, etc.\nOOP, Database handling, Optimization, Web Development.\nGPA 3.65/4.0\n\nCertificate of Computer Programming Aug 2023\n\nCoursework: Algorithm Design, Data Structures, Object Oriented Programming, Work Methodology.\nCertificate designed to specifically prepare students for an internship or full-time position.\nEmphasis in Science and Technology."
   },
   {
     "objectID": "resume.html#awards",
@@ -345,9 +345,9 @@
   {
     "objectID": "Cleansing_Projects/project3.html",
     "href": "Cleansing_Projects/project3.html",
-    "title": "Client Report - [Insert Project Title]",
+    "title": "Client Report - Finding relationships in baseball",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "Show the code\n#Establish connection with database\nsqlite_file = r'C:\\Users\\juanz\\Documents\\juan-zv.github.io\\data\\lahmansbaseballdb.sqlite'\n\ncon = sqlite3.connect(sqlite_file)\n\nq = '''\n    SELECT * \n    FROM sqlite_master \n    WHERE type='table'\n    '''\n    \ntable = pd.read_sql_query(q,con)\ntable.filter(['name'])\n\n\n\n\n\n\n\n\n\n\nname\n\n\n\n\n0\nallstarfull\n\n\n1\nappearances\n\n\n2\nawardsmanagers\n\n\n3\nawardsplayers\n\n\n4\nawardssharemanagers\n\n\n5\nawardsshareplayers\n\n\n6\nbatting\n\n\n7\nbattingpost\n\n\n8\ncollegeplaying\n\n\n9\ndivisions\n\n\n10\nfielding\n\n\n11\nfieldingof\n\n\n12\nfieldingofsplit\n\n\n13\nfieldingpost\n\n\n14\nhalloffame\n\n\n15\nhomegames\n\n\n16\nleagues\n\n\n17\nmanagers\n\n\n18\nmanagershalf\n\n\n19\nparks\n\n\n20\npeople\n\n\n21\npitching\n\n\n22\npitchingpost\n\n\n23\nsalaries\n\n\n24\nschools\n\n\n25\nseriespost\n\n\n26\nteams\n\n\n27\nteamsfranchises\n\n\n28\nteamshalf"
   },
   {
     "objectID": "Cleansing_Projects/project1.html",
@@ -359,16 +359,16 @@
   {
     "objectID": "Cleansing_Projects/project4.html",
     "href": "Cleansing_Projects/project4.html",
-    "title": "Client Report - [Insert Project Title]",
+    "title": "Client Report - Can you predict that?",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Include and execute your code here\nurl = \"https://raw.githubusercontent.com/byuidatascience/data4dwellings/master/data-raw/dwellings_ml/dwellings_ml.csv\"\ndwellings_ml = pd.read_csv(url)\n\n\nHighlight the Questions and Tasks"
   },
   {
     "objectID": "Cleansing_Projects/project5.html",
     "href": "Cleansing_Projects/project5.html",
-    "title": "Client Report - [Insert Project Title]",
+    "title": "Client Report - The war with the Star Wars",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
   },
   {
     "objectID": "Cleansing_Projects/project2.html",
@@ -411,5 +411,117 @@
     "title": "Client Report - What’s in a name?",
     "section": "QUESTION|TASK 4",
     "text": "QUESTION|TASK 4\nThink of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\nForrest = df.query(\"name == 'Forrest'\")\n\nchart4 = px.line(Forrest, x='year', y='Total', title='Forrest Through Time')\n\nchart4.add_vline(x='1994', line_dash=\"dash\", line_color=\"yellow\")\n\nchart4.update_layout(xaxis_title='Year', yaxis_title='Total Count')\n\nchart4.show()"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html#elevator-pitch",
+    "href": "Cleansing_Projects/project3.html#elevator-pitch",
+    "title": "Client Report - Finding relationships in baseball",
+    "section": "Elevator pitch",
+    "text": "Elevator pitch\nAnalyzing the “lahmansbaseball.db.sqlite” database using SQLite and Python’s sqlite3 library provides valuable insights into various aspects of baseball, including team performance, player statistics, and league dynamics. By querying the database, we can uncover trends in team standings over multiple seasons, track individual player performances, and assess the overall competitiveness of different leagues. Visualizing the data can help in understanding patterns such as batting averages, home run frequencies, and pitching statistics, allowing analysts and enthusiasts to gain deeper insights into the sport’s dynamics and evolution over time. Additionally, exploring relationships between player demographics, team strategies, and game outcomes can offer valuable insights for teams, coaches, and fans alike."
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html#questiontask-1",
+    "href": "Cleansing_Projects/project3.html#questiontask-1",
+    "title": "Client Report - Finding relationships in baseball",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nWrite an SQL query to create a new dataframe about baseball players who attended BYU-Idaho. The new table should contain five columns: playerID, schoolID, salary, and the yearID/teamID associated with each salary. Order the table by salary (highest to lowest) and print out the table in your report.\nThis table shows information for players with school ID as idbyuid and their salary with the year and the team they were playing for. \n\n\nRead and format data\nq1 = '''\n    SELECT DISTINCT p.playerID, s.schoolID, sa.salary, sa.yearID, sa.teamID\n    FROM people AS p\n    INNER JOIN collegeplaying AS c ON p.playerID = c.playerID\n    INNER JOIN schools AS s ON c.schoolID = s.schoolID\n    INNER JOIN salaries AS sa ON p.playerID = sa.playerID\n    WHERE s.schoolID = 'idbyuid'\n    ORDER BY sa.salary DESC;\n    '''\nquestion_1 = pd.read_sql_query(q1,con)\n    \nquestion_1\n\n\n\n\n\n\n\n\n\n\nplayerID\nschoolID\nsalary\nyearID\nteamID\n\n\n\n\n0\nlindsma01\nidbyuid\n4000000.0\n2014\nCHA\n\n\n1\nlindsma01\nidbyuid\n3600000.0\n2012\nBAL\n\n\n2\nlindsma01\nidbyuid\n2800000.0\n2011\nCOL\n\n\n3\nlindsma01\nidbyuid\n2300000.0\n2013\nCHA\n\n\n4\nlindsma01\nidbyuid\n1625000.0\n2010\nHOU\n\n\n5\nstephga01\nidbyuid\n1025000.0\n2001\nSLN\n\n\n6\nstephga01\nidbyuid\n900000.0\n2002\nSLN\n\n\n7\nstephga01\nidbyuid\n800000.0\n2003\nSLN\n\n\n8\nstephga01\nidbyuid\n550000.0\n2000\nSLN\n\n\n9\nlindsma01\nidbyuid\n410000.0\n2009\nFLO\n\n\n10\nlindsma01\nidbyuid\n395000.0\n2008\nFLO\n\n\n11\nlindsma01\nidbyuid\n380000.0\n2007\nFLO\n\n\n12\nstephga01\nidbyuid\n215000.0\n1999\nSLN\n\n\n13\nstephga01\nidbyuid\n185000.0\n1998\nPHI\n\n\n14\nstephga01\nidbyuid\n150000.0\n1997\nPHI"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html#questiontask-2",
+    "href": "Cleansing_Projects/project3.html#questiontask-2",
+    "title": "Client Report - Finding relationships in baseball",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nThis three-part question requires you to calculate batting average (number of hits divided by the number of at-bats)\nWrite an SQL query that provides playerID, yearID, and batting average for players with at least 1 at bat that year. Sort the table from highest batting average to lowest, and then by playerid alphabetically. Show the top 5 results in your report.\n\n\nRead and format data\nq2a = '''\n   SELECT playerID, yearID, \n   ROUND(CAST(SUM(H) AS FLOAT) / NULLIF(SUM(AB), 0), 3) AS batting_average\n    FROM batting\n    WHERE AB &gt; 0\n    GROUP BY playerID, yearID\n    ORDER BY batting_average DESC\n    LIMIT 5;\n    '''\nquestion_2a = pd.read_sql_query(q2a,con)\n    \nquestion_2a\n\n\n\n\n\n\n\n\n\n\nplayerID\nyearID\nbatting_average\n\n\n\n\n0\nabernte02\n1960\n1.0\n\n\n1\nabramge01\n1923\n1.0\n\n\n2\nacklefr01\n1964\n1.0\n\n\n3\nalanirj01\n2019\n1.0\n\n\n4\nalberan01\n2017\n1.0\n\n\n\n\n\n\n\n\nUse the same query as above, but only include players with at least 10 at bats that year. Print the top 5 results.\n\n\nRead and format data\nq2b = '''\n    SELECT playerID, yearID, \n       ROUND(CAST(SUM(H) AS FLOAT) / NULLIF(SUM(AB), 0), 3) AS batting_average\n    FROM batting\n    WHERE AB &gt;= 10  \n    GROUP BY playerID, yearID\n    ORDER BY batting_average DESC, playerID\n    LIMIT 5;\n'''\nquestion_2b = pd.read_sql_query(q2b,con)\n    \nquestion_2b\n\n\n\n\n\n\n\n\n\n\nplayerID\nyearID\nbatting_average\n\n\n\n\n0\nnymanny01\n1974\n0.643\n\n\n1\ncarsoma01\n2013\n0.636\n\n\n2\naltizda01\n1910\n0.600\n\n\n3\nsilvech01\n1948\n0.571\n\n\n4\npuccige01\n1930\n0.563\n\n\n\n\n\n\n\n\nNow calculate the batting average for players over their entire careers (all years combined). Only include players with at least 100 at bats, and print the top 5 results.\n\n\nRead and format data\nq2c = '''\n    SELECT playerID, \n       ROUND(CAST(SUM(H) AS FLOAT) / NULLIF(SUM(AB), 0), 3) AS career_batting_average\n    FROM batting\n    GROUP BY playerID\n    HAVING SUM(AB) &gt;= 100  \n    ORDER BY career_batting_average DESC\n    LIMIT 5;\n'''\nquestion_2c = pd.read_sql_query(q2c,con)\n    \nquestion_2c\n\n\n\n\n\n\n\n\n\n\nplayerID\ncareer_batting_average\n\n\n\n\n0\ncobbty01\n0.366\n\n\n1\nbarnero01\n0.360\n\n\n2\nhornsro01\n0.358\n\n\n3\njacksjo01\n0.356\n\n\n4\nmeyerle01\n0.356"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html#questiontask-3",
+    "href": "Cleansing_Projects/project3.html#questiontask-3",
+    "title": "Client Report - Finding relationships in baseball",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nPick any two baseball teams and compare them using a metric of your choice (average salary, home runs, number of wins, etc). Write an SQL query to get the data you need, then make a graph using Plotly Express to visualize the comparison. What do you learn?\nFor this question I chose the Seattle Mariners and the Boston Reds to compare their team’s total salary. I see that the total salary from the Boston Reds is higher than the Mariners which makes me think they are better paid, making any baseball player to aim to play for that team. I also think about each city’s economy over time and in general which may also explain why Boston players would have to be paid more than Seattle ones.\n\n\nRead and format data\nq3 = '''\n    SELECT teamID, SUM(salary) AS salary\n    FROM salaries\n    WHERE teamID IN ('SEA', 'BOS')\n    GROUP BY teamID;\n'''\n\nquestion_3 = pd.read_sql_query(q3,con)\n    \nquestion_3\n\n\nvisual = px.bar(question_3, x='teamID', y='salary', title='Salaries Comparison',\n             labels={'teamID': 'Team', 'salary': 'Team Total Salary'})\n\nvisual.show()"
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#elevator-pitch",
+    "href": "Cleansing_Projects/project4.html#elevator-pitch",
+    "title": "Client Report - Can you predict that?",
+    "section": "",
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Include and execute your code here\nurl = \"https://raw.githubusercontent.com/byuidatascience/data4dwellings/master/data-raw/dwellings_ml/dwellings_ml.csv\"\ndwellings_ml = pd.read_csv(url)\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#questiontask-1",
+    "href": "Cleansing_Projects/project4.html#questiontask-1",
+    "title": "Client Report - Can you predict that?",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nCreate 2-3 charts that evaluate potential relationships between the home variables and before1980. Explain what you learn from the charts that could help a machine learning algorithm.\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure."
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#questiontask-2",
+    "href": "Cleansing_Projects/project4.html#questiontask-2",
+    "title": "Client Report - Can you predict that?",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nBuild a classification model labeling houses as being built “before 1980” or “during or after 1980”. Your goal is to reach or exceed 90% accuracy. Explain your final model choice (algorithm, tuning parameters, etc) and describe what other models you tried.\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure."
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#questiontask-3",
+    "href": "Cleansing_Projects/project4.html#questiontask-3",
+    "title": "Client Report - Can you predict that?",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nJustify your classification model by discussing the most important features selected by your model. This discussion should include a chart and a description of the features.\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure."
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#questiontask-4",
+    "href": "Cleansing_Projects/project4.html#questiontask-4",
+    "title": "Client Report - Can you predict that?",
+    "section": "QUESTION|TASK 4",
+    "text": "QUESTION|TASK 4\nDescribe the quality of your classification model using 2-3 different evaluation metrics. You also need to explain how to interpret each of the evaluation metrics you use.\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure."
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html#elevator-pitch",
+    "href": "Cleansing_Projects/project5.html#elevator-pitch",
+    "title": "Client Report - The war with the Star Wars",
+    "section": "",
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html#questiontask-1",
+    "href": "Cleansing_Projects/project5.html#questiontask-1",
+    "title": "Client Report - The war with the Star Wars",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = (df.head(1000)\n    .groupby('year')\n    .sum()\n    .reset_index()\n    .tail(10)\n    .filter([\"year\", \"AK\",\"AR\"])\n)\ndisplay(mydat)\n\n\n\n\n\n\n\nNot much of a table {#cell-Q1-table}\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html#questiontask-2",
+    "href": "Cleansing_Projects/project5.html#questiontask-2",
+    "title": "Client Report - The war with the Star Wars",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html#questiontask-3",
+    "href": "Cleansing_Projects/project5.html#questiontask-3",
+    "title": "Client Report - The war with the Star Wars",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
+  },
+  {
+    "objectID": "resume.html#experience",
+    "href": "resume.html#experience",
+    "title": "Juan Zurita",
+    "section": "",
+    "text": "International Services Processor\nRexburg, ID | Brigham Young University-Idaho Nov 2022-Aug 2023\n\nEfficiently handle walk-ins, phone calls, and emails, providing information and directing visitors to appropriate departments.\nAssist students with administrative processes and immigration-related questions, offering guidance and facilitating necessary paperwork.\nMaintain organized records, schedule appointments, and perform general administrative tasks with attention to detail and multitasking abilities.\n\n\n\nFull-time Volunteer Representative\nSanta Cruz, Bolivia | The Church of Jesus Christ of Latter-day Saints Jan 2020-Jan 2022\n\nTaught English as a second language for groups of 5-10 people.\nPlanned flights and trips for other volunteers as an executive secretary for the Mission.\nConducted weekly training meetings to establish goals in order to fulfill working requisites.\nLed and trained other volunteers as trainer, district leader, zone leader."
+  },
+  {
+    "objectID": "resume.html#personal-projects",
+    "href": "resume.html#personal-projects",
+    "title": "Juan Zurita",
+    "section": "",
+    "text": "Juan Zurita Portfolio: Static web page designed to showcase my projects and provide a professional bio.\nU&I Ride: Mobile app concept aimed at optimizing ride-sharing services in the Rexburg – Utah area.\nEstudio + Fe: Web application focused on enhancing scripture cross-referencing and note-taking capabilities for a wider audience."
+  },
+  {
+    "objectID": "resume.html#skills-and-interests",
+    "href": "resume.html#skills-and-interests",
+    "title": "Juan Zurita",
+    "section": "",
+    "text": "Proficient in SCRUM methodologies and Git version control.\nSkilled in Firebase, Flutter, React, and React Native for backend, mobile, and web development.\nExperienced in C#, Python, SQL, Kotlin, Android development.\nFamiliar with Rust for systems programming.\nCurrently learning Sass for CSS preprocessing, and iOS development."
   }
 ]
