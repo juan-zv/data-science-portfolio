@@ -76,6 +76,7 @@ q1 = '''
     WHERE s.schoolID = 'idbyuid'
     ORDER BY sa.salary DESC;
     '''
+    
 question_1 = pd.read_sql_query(q1,con)
     
 question_1
