@@ -37,7 +37,7 @@ import sqlite3
 ```{python}
 
 #Establish connection with database
-sqlite_file = r'C:\Users\juanz\Documents\juan-zv.github.io\data\lahmansbaseballdb.sqlite'
+sqlite_file = r'lahmansbaseballdb.sqlite'
 
 con = sqlite3.connect(sqlite_file)
 
