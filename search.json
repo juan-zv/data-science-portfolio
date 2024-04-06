@@ -161,102 +161,18 @@
     "text": "QUESTION|TASK 3\nPick any two baseball teams and compare them using a metric of your choice (average salary, home runs, number of wins, etc). Write an SQL query to get the data you need, then make a graph using Plotly Express to visualize the comparison. What do you learn?\nFor this question I chose the Seattle Mariners and the Boston Reds to compare their team’s total salary. I see that the total salary from the Boston Reds is higher than the Mariners which makes me think they are better paid, making any baseball player to aim to play for that team. I also think about each city’s economy over time and in general which may also explain why Boston players would have to be paid more than Seattle ones.\n\n\nRead and format data\nq3 = '''\n    SELECT teamID, SUM(salary) AS salary\n    FROM salaries\n    WHERE teamID IN ('SEA', 'BOS')\n    GROUP BY teamID;\n'''\n\nquestion_3 = pd.read_sql_query(q3,con)\n    \nquestion_3\n\n\nvisual = px.bar(question_3, x='teamID', y='salary', title='Salaries Comparison',\n             labels={'teamID': 'Team', 'salary': 'Team Total Salary'})\n\nvisual.show()"
   },
   {
-    "objectID": "ml.html",
-    "href": "ml.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "ml.html#title-2-header",
-    "href": "ml.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "about me",
+    "title": "About Me",
     "section": "",
-    "text": "MarkDown Basics"
+    "text": "Having a data science portfolio is essential for showing off your skills and experience in the field. It’s like a showcase of your real-world problem-solving abilities with data, making you stand out to potential employers, clients, or collaborators. It’s also a great way to track your progress and growth over time, helping you snag job opportunities and move forward in your data science career.\nThis is my portfolio I want to share with anyone following my progress.\nMarkDown Basics"
   },
   {
-    "objectID": "index.html#title-2-header",
-    "href": "index.html#title-2-header",
-    "title": "about me",
+    "objectID": "index.html#whis-is-it-important-to-have-a-portfolio",
+    "href": "index.html#whis-is-it-important-to-have-a-portfolio",
+    "title": "About Me",
     "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "cleansing.html",
-    "href": "cleansing.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "cleansing.html#title-2-header",
-    "href": "cleansing.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "story_telling.html",
-    "href": "story_telling.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "story_telling.html#title-2-header",
-    "href": "story_telling.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "competition.html",
-    "href": "competition.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "competition.html#title-2-header",
-    "href": "competition.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "full_stack.html",
-    "href": "full_stack.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "full_stack.html#title-2-header",
-    "href": "full_stack.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "exploration.html",
-    "href": "exploration.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "exploration.html#title-2-header",
-    "href": "exploration.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
+    "text": "Having a data science portfolio is essential for showing off your skills and experience in the field. It’s like a showcase of your real-world problem-solving abilities with data, making you stand out to potential employers, clients, or collaborators. It’s also a great way to track your progress and growth over time, helping you snag job opportunities and move forward in your data science career.\nThis is my portfolio I want to share with anyone following my progress.\nMarkDown Basics"
   },
   {
     "objectID": "Cleansing_Projects/project0.html",
