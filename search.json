@@ -1,278 +1,5 @@
 [
   {
-    "objectID": "ml.html",
-    "href": "ml.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "ml.html#title-2-header",
-    "href": "ml.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "exploration.html",
-    "href": "exploration.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "exploration.html#title-2-header",
-    "href": "exploration.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "index.html#title-2-header",
-    "href": "index.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "Cleansing_Projects/project5.html",
-    "href": "Cleansing_Projects/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
-  },
-  {
-    "objectID": "Cleansing_Projects/project5.html#elevator-pitch",
-    "href": "Cleansing_Projects/project5.html#elevator-pitch",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
-  },
-  {
-    "objectID": "Cleansing_Projects/project5.html#questiontask-1",
-    "href": "Cleansing_Projects/project5.html#questiontask-1",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 1",
-    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = (df.head(1000)\n    .groupby('year')\n    .sum()\n    .reset_index()\n    .tail(10)\n    .filter([\"year\", \"AK\",\"AR\"])\n)\ndisplay(mydat)\n\n\n\n\n\n\n\nNot much of a table {#cell-Q1-table}\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
-  },
-  {
-    "objectID": "Cleansing_Projects/project5.html#questiontask-2",
-    "href": "Cleansing_Projects/project5.html#questiontask-2",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 2",
-    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
-  },
-  {
-    "objectID": "Cleansing_Projects/project5.html#questiontask-3",
-    "href": "Cleansing_Projects/project5.html#questiontask-3",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 3",
-    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
-  },
-  {
-    "objectID": "Cleansing_Projects/project3.html",
-    "href": "Cleansing_Projects/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
-  },
-  {
-    "objectID": "Cleansing_Projects/project3.html#elevator-pitch",
-    "href": "Cleansing_Projects/project3.html#elevator-pitch",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
-  },
-  {
-    "objectID": "Cleansing_Projects/project3.html#questiontask-1",
-    "href": "Cleansing_Projects/project3.html#questiontask-1",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 1",
-    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = (df.head(1000)\n    .groupby('year')\n    .sum()\n    .reset_index()\n    .tail(10)\n    .filter([\"year\", \"AK\",\"AR\"])\n)\ndisplay(mydat)\n\n\n\n\n\n\n\nNot much of a table {#cell-Q1-table}\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
-  },
-  {
-    "objectID": "Cleansing_Projects/project3.html#questiontask-2",
-    "href": "Cleansing_Projects/project3.html#questiontask-2",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 2",
-    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
-  },
-  {
-    "objectID": "Cleansing_Projects/project3.html#questiontask-3",
-    "href": "Cleansing_Projects/project3.html#questiontask-3",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 3",
-    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
-  },
-  {
-    "objectID": "Cleansing_Projects/project4.html",
-    "href": "Cleansing_Projects/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
-  },
-  {
-    "objectID": "Cleansing_Projects/project4.html#elevator-pitch",
-    "href": "Cleansing_Projects/project4.html#elevator-pitch",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
-  },
-  {
-    "objectID": "Cleansing_Projects/project4.html#questiontask-1",
-    "href": "Cleansing_Projects/project4.html#questiontask-1",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 1",
-    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = (df.head(1000)\n    .groupby('year')\n    .sum()\n    .reset_index()\n    .tail(10)\n    .filter([\"year\", \"AK\",\"AR\"])\n)\ndisplay(mydat)\n\n\n\n\n\n\n\nNot much of a table {#cell-Q1-table}\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
-  },
-  {
-    "objectID": "Cleansing_Projects/project4.html#questiontask-2",
-    "href": "Cleansing_Projects/project4.html#questiontask-2",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 2",
-    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
-  },
-  {
-    "objectID": "Cleansing_Projects/project4.html#questiontask-3",
-    "href": "Cleansing_Projects/project4.html#questiontask-3",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 3",
-    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
-  },
-  {
-    "objectID": "cleansing.html",
-    "href": "cleansing.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "cleansing.html#title-2-header",
-    "href": "cleansing.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "full_stack.html",
-    "href": "full_stack.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "full_stack.html#title-2-header",
-    "href": "full_stack.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "Cleansing_Projects/project2.html",
-    "href": "Cleansing_Projects/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
-  },
-  {
-    "objectID": "Cleansing_Projects/project2.html#elevator-pitch",
-    "href": "Cleansing_Projects/project2.html#elevator-pitch",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
-  },
-  {
-    "objectID": "Cleansing_Projects/project2.html#questiontask-1",
-    "href": "Cleansing_Projects/project2.html#questiontask-1",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 1",
-    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = (df.head(1000)\n    .groupby('year')\n    .sum()\n    .reset_index()\n    .tail(10)\n    .filter([\"year\", \"AK\",\"AR\"])\n)\ndisplay(mydat)\n\n\n\n\n\n\n\nNot much of a table {#cell-Q1-table}\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
-  },
-  {
-    "objectID": "Cleansing_Projects/project2.html#questiontask-2",
-    "href": "Cleansing_Projects/project2.html#questiontask-2",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 2",
-    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
-  },
-  {
-    "objectID": "Cleansing_Projects/project2.html#questiontask-3",
-    "href": "Cleansing_Projects/project2.html#questiontask-3",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 3",
-    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
-  },
-  {
-    "objectID": "Cleansing_Projects/project1.html",
-    "href": "Cleansing_Projects/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
-  },
-  {
-    "objectID": "Cleansing_Projects/project1.html#elevator-pitch",
-    "href": "Cleansing_Projects/project1.html#elevator-pitch",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
-  },
-  {
-    "objectID": "Cleansing_Projects/project1.html#questiontask-1",
-    "href": "Cleansing_Projects/project1.html#questiontask-1",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 1",
-    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = (df.head(1000)\n    .groupby('year')\n    .sum()\n    .reset_index()\n    .tail(10)\n    .filter([\"year\", \"AK\",\"AR\"])\n)\ndisplay(mydat)\n\n\n\n\n\n\n\nNot much of a table {#cell-Q1-table}\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
-  },
-  {
-    "objectID": "Cleansing_Projects/project1.html#questiontask-2",
-    "href": "Cleansing_Projects/project1.html#questiontask-2",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 2",
-    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
-  },
-  {
-    "objectID": "Cleansing_Projects/project1.html#questiontask-3",
-    "href": "Cleansing_Projects/project1.html#questiontask-3",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "QUESTION|TASK 3",
-    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
-  },
-  {
-    "objectID": "competition.html",
-    "href": "competition.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "competition.html#title-2-header",
-    "href": "competition.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "story_telling.html",
-    "href": "story_telling.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "story_telling.html#title-2-header",
-    "href": "story_telling.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
     "objectID": "resume.html",
     "href": "resume.html",
     "title": "Juan Zurita",
@@ -313,5 +40,327 @@
     "title": "Juan Zurita",
     "section": "",
     "text": "Proficient in SCRUM methodologies and Git version control.\nSkilled in Firebase, Flutter, React, and React Native for backend, mobile, and web development.\nExperienced in C#, Python, SQL, Kotlin, Android development.\nFamiliar with Rust for systems programming.\nCurrently learning Sass for CSS preprocessing, and iOS development."
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html",
+    "href": "Cleansing_Projects/project4.html",
+    "title": "Client Report - Can you predict that?",
+    "section": "",
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Include and execute your code here\nurl = \"https://raw.githubusercontent.com/byuidatascience/data4dwellings/master/data-raw/dwellings_ml/dwellings_ml.csv\"\ndwellings_ml = pd.read_csv(url)\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#elevator-pitch",
+    "href": "Cleansing_Projects/project4.html#elevator-pitch",
+    "title": "Client Report - Can you predict that?",
+    "section": "",
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Include and execute your code here\nurl = \"https://raw.githubusercontent.com/byuidatascience/data4dwellings/master/data-raw/dwellings_ml/dwellings_ml.csv\"\ndwellings_ml = pd.read_csv(url)\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#questiontask-1",
+    "href": "Cleansing_Projects/project4.html#questiontask-1",
+    "title": "Client Report - Can you predict that?",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nCreate 2-3 charts that evaluate potential relationships between the home variables and before1980. Explain what you learn from the charts that could help a machine learning algorithm.\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure."
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#questiontask-2",
+    "href": "Cleansing_Projects/project4.html#questiontask-2",
+    "title": "Client Report - Can you predict that?",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nBuild a classification model labeling houses as being built “before 1980” or “during or after 1980”. Your goal is to reach or exceed 90% accuracy. Explain your final model choice (algorithm, tuning parameters, etc) and describe what other models you tried.\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure."
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#questiontask-3",
+    "href": "Cleansing_Projects/project4.html#questiontask-3",
+    "title": "Client Report - Can you predict that?",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nJustify your classification model by discussing the most important features selected by your model. This discussion should include a chart and a description of the features.\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure."
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html#questiontask-4",
+    "href": "Cleansing_Projects/project4.html#questiontask-4",
+    "title": "Client Report - Can you predict that?",
+    "section": "QUESTION|TASK 4",
+    "text": "QUESTION|TASK 4\nDescribe the quality of your classification model using 2-3 different evaluation metrics. You also need to explain how to interpret each of the evaluation metrics you use.\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure."
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html",
+    "href": "Cleansing_Projects/project1.html",
+    "title": "Client Report - What’s in a name?",
+    "section": "",
+    "text": "Analyzing the names_year.csv dataset using Pandas and Plotly Express reveals valuable insights into the evolution of names over time. By plotting the data, we can observe trends in naming preferences and popularity across different years. Key insights include identifying the emergence and decline of certain names, tracking the overall popularity of specific names over time, and potentially uncovering cultural or societal influences on naming trends. Additionally, visualizing the data allows the comparison of naming patterns between genders or regions, providing an understanding of how names have evolved throughout history.\n\n\nRead and format project data\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")"
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#elevator-pitch",
+    "href": "Cleansing_Projects/project1.html#elevator-pitch",
+    "title": "Client Report - What’s in a name?",
+    "section": "",
+    "text": "Analyzing the names_year.csv dataset using Pandas and Plotly Express reveals valuable insights into the evolution of names over time. By plotting the data, we can observe trends in naming preferences and popularity across different years. Key insights include identifying the emergence and decline of certain names, tracking the overall popularity of specific names over time, and potentially uncovering cultural or societal influences on naming trends. Additionally, visualizing the data allows the comparison of naming patterns between genders or regions, providing an understanding of how names have evolved throughout history.\n\n\nRead and format project data\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")"
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#questiontask-1",
+    "href": "Cleansing_Projects/project1.html#questiontask-1",
+    "title": "Client Report - What’s in a name?",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nHow does your name at your birth year compare to its use historically?\nJuan is a name used often throughout the years. Its popularity was increasing and was definetiley pupular around the 2001 which is the year I was born. However, after the 2006, we can see a drop in the use of this name.\n\n\nRead and format data\nJuan = df.query(\"name == 'Juan'\")\n\nchart = px.line(Juan, x='year', y='Total', title='Juan Through Time')\n\nchart.add_vline(x='2001', line_dash=\"dash\", line_color=\"yellow\")\n\nchart.update_layout(xaxis_title='Year', yaxis_title='Total Count')\n\nchart.show()"
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#questiontask-2",
+    "href": "Cleansing_Projects/project1.html#questiontask-2",
+    "title": "Client Report - What’s in a name?",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nIf you talked to someone named Brittany on the phone, what is your guess of his or her age? What ages would you not guess?\nMy first guess is that Brittany should eb young because that is just what I feel about that name. After analyzing I have realized that she could be between 36-24 years old. This chart shows how many people were named Brittany.\n\n\nRead and format data\n# Include and execute your code here\nBrittany = df.query(\"name == 'Brittany'\")\n\nchart2 = px.bar(Brittany, x='year', y='Total', title='Brittany Through Time')\n\nchart2.update_layout(xaxis_title='Year', yaxis_title='Total Count')\n\nchart2.show()"
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#questiontask-3",
+    "href": "Cleansing_Projects/project1.html#questiontask-3",
+    "title": "Client Report - What’s in a name?",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nMary, Martha, Peter, and Paul are all Christian names. From 1920 - 2000, compare the name usage of each of the four names. What trends do you notice?\nFrom this analysis I realized that these names are being less used by everyone. Especially after the 50s. Culture is slowly leaving some christian customs behind and this is one of them.\n\n\nRead and format data\n# Include and execute your code here\n\nnames = (df\n        .query(\"name in ['Mary','Martha', 'Peter', 'Paul']\")\n        .query(\"year &gt;= 1920 and year &lt;=2000\"))\n\nnames_chart = px.line(names, x='year', y='Total', color = 'name', title='Mary, Martha, Peter and Paul Through Time')\n\nnames_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count', legend_title=' ')\n\nnames_chart.show()"
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#questiontask-4",
+    "href": "Cleansing_Projects/project1.html#questiontask-4",
+    "title": "Client Report - What’s in a name?",
+    "section": "QUESTION|TASK 4",
+    "text": "QUESTION|TASK 4\nThink of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?\nFor this question I chose “Forrest” from the movie “Forrest Gump” which came out in 1994. As we see, this movie really impacted society and I can say was a good hit because I really loved it. The movie definetiley had a big impact on the usage of the name and after that year, everyone stopped using it that much.\n\n\nRead and format data\n# Include and execute your code here\n\nForrest = df.query(\"name == 'Forrest'\")\n\nchart4 = px.line(Forrest, x='year', y='Total', title='Forrest Through Time')\n\nchart4.add_vline(x='1994', line_dash=\"dash\", line_color=\"yellow\")\n\nchart4.update_layout(xaxis_title='Year', yaxis_title='Total Count')\n\nchart4.show()"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html",
+    "href": "Cleansing_Projects/project3.html",
+    "title": "Client Report - Finding relationships in baseball",
+    "section": "",
+    "text": "Show the code\n#Establish connection with database\nsqlite_file = r'lahmansbaseballdb.sqlite'\n\ncon = sqlite3.connect(sqlite_file)\n\nq = '''\n    SELECT * \n    FROM sqlite_master \n    WHERE type='table'\n    '''\n    \ntable = pd.read_sql_query(q,con)\ntable.filter(['name'])\n\n\n\n\n\n\n\n\n\n\nname\n\n\n\n\n0\nallstarfull\n\n\n1\nappearances\n\n\n2\nawardsmanagers\n\n\n3\nawardsplayers\n\n\n4\nawardssharemanagers\n\n\n5\nawardsshareplayers\n\n\n6\nbatting\n\n\n7\nbattingpost\n\n\n8\ncollegeplaying\n\n\n9\ndivisions\n\n\n10\nfielding\n\n\n11\nfieldingof\n\n\n12\nfieldingofsplit\n\n\n13\nfieldingpost\n\n\n14\nhalloffame\n\n\n15\nhomegames\n\n\n16\nleagues\n\n\n17\nmanagers\n\n\n18\nmanagershalf\n\n\n19\nparks\n\n\n20\npeople\n\n\n21\npitching\n\n\n22\npitchingpost\n\n\n23\nsalaries\n\n\n24\nschools\n\n\n25\nseriespost\n\n\n26\nteams\n\n\n27\nteamsfranchises\n\n\n28\nteamshalf"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html#elevator-pitch",
+    "href": "Cleansing_Projects/project3.html#elevator-pitch",
+    "title": "Client Report - Finding relationships in baseball",
+    "section": "Elevator pitch",
+    "text": "Elevator pitch\nAnalyzing the “lahmansbaseball.db.sqlite” database using SQLite and Python’s sqlite3 library provides valuable insights into various aspects of baseball, including team performance, player statistics, and league dynamics. By querying the database, we can uncover trends in team standings over multiple seasons, track individual player performances, and assess the overall competitiveness of different leagues. Visualizing the data can help in understanding patterns such as batting averages, home run frequencies, and pitching statistics, allowing analysts and enthusiasts to gain deeper insights into the sport’s dynamics and evolution over time. Additionally, exploring relationships between player demographics, team strategies, and game outcomes can offer valuable insights for teams, coaches, and fans alike."
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html#questiontask-1",
+    "href": "Cleansing_Projects/project3.html#questiontask-1",
+    "title": "Client Report - Finding relationships in baseball",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nWrite an SQL query to create a new dataframe about baseball players who attended BYU-Idaho. The new table should contain five columns: playerID, schoolID, salary, and the yearID/teamID associated with each salary. Order the table by salary (highest to lowest) and print out the table in your report.\nThis table shows information for players with school ID as idbyuid and their salary with the year and the team they were playing for. \n\n\nRead and format data\nq1 = '''\n    SELECT DISTINCT p.playerID, s.schoolID, sa.salary, sa.yearID, sa.teamID\n    FROM people AS p\n    INNER JOIN collegeplaying AS c ON p.playerID = c.playerID\n    INNER JOIN schools AS s ON c.schoolID = s.schoolID\n    INNER JOIN salaries AS sa ON p.playerID = sa.playerID\n    WHERE s.schoolID = 'idbyuid'\n    ORDER BY sa.salary DESC;\n    '''\n    \nquestion_1 = pd.read_sql_query(q1,con)\n    \nquestion_1\n\n\n\n\n\n\n\n\n\n\nplayerID\nschoolID\nsalary\nyearID\nteamID\n\n\n\n\n0\nlindsma01\nidbyuid\n4000000.0\n2014\nCHA\n\n\n1\nlindsma01\nidbyuid\n3600000.0\n2012\nBAL\n\n\n2\nlindsma01\nidbyuid\n2800000.0\n2011\nCOL\n\n\n3\nlindsma01\nidbyuid\n2300000.0\n2013\nCHA\n\n\n4\nlindsma01\nidbyuid\n1625000.0\n2010\nHOU\n\n\n5\nstephga01\nidbyuid\n1025000.0\n2001\nSLN\n\n\n6\nstephga01\nidbyuid\n900000.0\n2002\nSLN\n\n\n7\nstephga01\nidbyuid\n800000.0\n2003\nSLN\n\n\n8\nstephga01\nidbyuid\n550000.0\n2000\nSLN\n\n\n9\nlindsma01\nidbyuid\n410000.0\n2009\nFLO\n\n\n10\nlindsma01\nidbyuid\n395000.0\n2008\nFLO\n\n\n11\nlindsma01\nidbyuid\n380000.0\n2007\nFLO\n\n\n12\nstephga01\nidbyuid\n215000.0\n1999\nSLN\n\n\n13\nstephga01\nidbyuid\n185000.0\n1998\nPHI\n\n\n14\nstephga01\nidbyuid\n150000.0\n1997\nPHI"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html#questiontask-2",
+    "href": "Cleansing_Projects/project3.html#questiontask-2",
+    "title": "Client Report - Finding relationships in baseball",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nThis three-part question requires you to calculate batting average (number of hits divided by the number of at-bats)\nWrite an SQL query that provides playerID, yearID, and batting average for players with at least 1 at bat that year. Sort the table from highest batting average to lowest, and then by playerid alphabetically. Show the top 5 results in your report.\n\n\nRead and format data\nq2a = '''\n   SELECT playerID, yearID, \n   ROUND(CAST(SUM(H) AS FLOAT) / NULLIF(SUM(AB), 0), 3) AS batting_average\n    FROM batting\n    WHERE AB &gt; 0\n    GROUP BY playerID, yearID\n    ORDER BY batting_average DESC\n    LIMIT 5;\n    '''\nquestion_2a = pd.read_sql_query(q2a,con)\n    \nquestion_2a\n\n\n\n\n\n\n\n\n\n\nplayerID\nyearID\nbatting_average\n\n\n\n\n0\nabernte02\n1960\n1.0\n\n\n1\nabramge01\n1923\n1.0\n\n\n2\nacklefr01\n1964\n1.0\n\n\n3\nalanirj01\n2019\n1.0\n\n\n4\nalberan01\n2017\n1.0\n\n\n\n\n\n\n\n\nUse the same query as above, but only include players with at least 10 at bats that year. Print the top 5 results.\n\n\nRead and format data\nq2b = '''\n    SELECT playerID, yearID, \n       ROUND(CAST(SUM(H) AS FLOAT) / NULLIF(SUM(AB), 0), 3) AS batting_average\n    FROM batting\n    WHERE AB &gt;= 10  \n    GROUP BY playerID, yearID\n    ORDER BY batting_average DESC, playerID\n    LIMIT 5;\n'''\nquestion_2b = pd.read_sql_query(q2b,con)\n    \nquestion_2b\n\n\n\n\n\n\n\n\n\n\nplayerID\nyearID\nbatting_average\n\n\n\n\n0\nnymanny01\n1974\n0.643\n\n\n1\ncarsoma01\n2013\n0.636\n\n\n2\naltizda01\n1910\n0.600\n\n\n3\nsilvech01\n1948\n0.571\n\n\n4\npuccige01\n1930\n0.563\n\n\n\n\n\n\n\n\nNow calculate the batting average for players over their entire careers (all years combined). Only include players with at least 100 at bats, and print the top 5 results.\n\n\nRead and format data\nq2c = '''\n    SELECT playerID, \n       ROUND(CAST(SUM(H) AS FLOAT) / NULLIF(SUM(AB), 0), 3) AS career_batting_average\n    FROM batting\n    GROUP BY playerID\n    HAVING SUM(AB) &gt;= 100  \n    ORDER BY career_batting_average DESC\n    LIMIT 5;\n'''\nquestion_2c = pd.read_sql_query(q2c,con)\n    \nquestion_2c\n\n\n\n\n\n\n\n\n\n\nplayerID\ncareer_batting_average\n\n\n\n\n0\ncobbty01\n0.366\n\n\n1\nbarnero01\n0.360\n\n\n2\nhornsro01\n0.358\n\n\n3\njacksjo01\n0.356\n\n\n4\nmeyerle01\n0.356"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html#questiontask-3",
+    "href": "Cleansing_Projects/project3.html#questiontask-3",
+    "title": "Client Report - Finding relationships in baseball",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nPick any two baseball teams and compare them using a metric of your choice (average salary, home runs, number of wins, etc). Write an SQL query to get the data you need, then make a graph using Plotly Express to visualize the comparison. What do you learn?\nFor this question I chose the Seattle Mariners and the Boston Reds to compare their team’s total salary. I see that the total salary from the Boston Reds is higher than the Mariners which makes me think they are better paid, making any baseball player to aim to play for that team. I also think about each city’s economy over time and in general which may also explain why Boston players would have to be paid more than Seattle ones.\n\n\nRead and format data\nq3 = '''\n    SELECT teamID, SUM(salary) AS salary\n    FROM salaries\n    WHERE teamID IN ('SEA', 'BOS')\n    GROUP BY teamID;\n'''\n\nquestion_3 = pd.read_sql_query(q3,con)\n    \nquestion_3\n\n\nvisual = px.bar(question_3, x='teamID', y='salary', title='Salaries Comparison',\n             labels={'teamID': 'Team', 'salary': 'Team Total Salary'})\n\nvisual.show()"
+  },
+  {
+    "objectID": "ml.html",
+    "href": "ml.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "ml.html#title-2-header",
+    "href": "ml.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "index.html#title-2-header",
+    "href": "index.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "cleansing.html",
+    "href": "cleansing.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "cleansing.html#title-2-header",
+    "href": "cleansing.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "story_telling.html",
+    "href": "story_telling.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "story_telling.html#title-2-header",
+    "href": "story_telling.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "competition.html",
+    "href": "competition.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "competition.html#title-2-header",
+    "href": "competition.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "full_stack.html",
+    "href": "full_stack.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "full_stack.html#title-2-header",
+    "href": "full_stack.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "exploration.html",
+    "href": "exploration.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "exploration.html#title-2-header",
+    "href": "exploration.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "Cleansing_Projects/project0.html",
+    "href": "Cleansing_Projects/project0.html",
+    "title": "Client Report - Project 0",
+    "section": "",
+    "text": "Working with csv files is common in data analysis because it allows to store data with a simple format and to use it with data analysis like Pandas and Plotly Express. Plotly Express let us graph data to visualize results and better analyze\n\n\nRead and format project data\nmpg = pd.read_csv(\"https://github.com/byuidatascience/data4python4ds/raw/master/data-raw/mpg/mpg.csv\")"
+  },
+  {
+    "objectID": "Cleansing_Projects/project0.html#elevator-pitch",
+    "href": "Cleansing_Projects/project0.html#elevator-pitch",
+    "title": "Client Report - Project 0",
+    "section": "",
+    "text": "Working with csv files is common in data analysis because it allows to store data with a simple format and to use it with data analysis like Pandas and Plotly Express. Plotly Express let us graph data to visualize results and better analyze\n\n\nRead and format project data\nmpg = pd.read_csv(\"https://github.com/byuidatascience/data4python4ds/raw/master/data-raw/mpg/mpg.csv\")"
+  },
+  {
+    "objectID": "Cleansing_Projects/project0.html#questiontask-1",
+    "href": "Cleansing_Projects/project0.html#questiontask-1",
+    "title": "Client Report - Project 0",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nWrite a python script to create the example chart from section 3.2.2 of the textbook (part of the assigned readings).\n\n\nRead and format data\nfig = px.scatter(mpg, x=\"displ\", y=\"hwy\", title=\"MPG\")\n\nfig.update_layout(xaxis_title=\"Car's engine size in liters\", yaxis_title=\"Car's fuel efficiency\")\n\nfig.show()\n\n(mpg\n  .head(5)\n  .filter([\"manufacturer\", \"model\",\"year\", \"hwy\"])\n)\n\n\n                                                \n\n\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\nyear\nhwy\n\n\n\n\n0\naudi\na4\n1999\n29\n\n\n1\naudi\na4\n1999\n29\n\n\n2\naudi\na4\n2008\n31\n\n\n3\naudi\na4\n2008\n30\n\n\n4\naudi\na4\n1999\n26"
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html",
+    "href": "Cleansing_Projects/project2.html",
+    "title": "Client Report - Late flights and missing data (JSON files)",
+    "section": "",
+    "text": "Analyzing the flights_missing.json dataset offers insights into flight delays and associated factors such as airline performance and weather conditions. By exploring the data, we can uncover patterns in the frequency and duration of flight delays, identify which airlines are most prone to delays, and assess the impact of weather on flight schedules. Utilizing visualizations, we can depict correlations between delay durations and various parameters like time of day, day of the week, and weather conditions, enabling stakeholders to make informed decisions for improving flight operations and passenger experiences.\n\n\nRead and format project data\ndf = pd.read_json(\"https://github.com/byuidatascience/data4missing/raw/master/data-raw/flights_missing/flights_missing.json\")"
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html#elevator-pitch",
+    "href": "Cleansing_Projects/project2.html#elevator-pitch",
+    "title": "Client Report - Late flights and missing data (JSON files)",
+    "section": "",
+    "text": "Analyzing the flights_missing.json dataset offers insights into flight delays and associated factors such as airline performance and weather conditions. By exploring the data, we can uncover patterns in the frequency and duration of flight delays, identify which airlines are most prone to delays, and assess the impact of weather on flight schedules. Utilizing visualizations, we can depict correlations between delay durations and various parameters like time of day, day of the week, and weather conditions, enabling stakeholders to make informed decisions for improving flight operations and passenger experiences.\n\n\nRead and format project data\ndf = pd.read_json(\"https://github.com/byuidatascience/data4missing/raw/master/data-raw/flights_missing/flights_missing.json\")"
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html#questiontask-1",
+    "href": "Cleansing_Projects/project2.html#questiontask-1",
+    "title": "Client Report - Late flights and missing data (JSON files)",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nFix all of the varied missing data types in the data to be consistent (all missing values should be displayed as “NaN”). In your report include one record example (one row) from your new data, in the raw JSON format. Your example should display the “NaN” for at least one missing value.\nI chose the 9th row which shows NaN on the key “minutes_delayed_nas”\n\n\nRead and format data\ndf.replace({\n    -999: np.nan,\n    'n/a': np.nan,\n    'Febuary': 'February',\n    '': np.nan,\n    '1500+': 1500\n}, inplace=True)\n\ndf = df.query(\"month != 'na'\")\n\navg_delay = df['num_of_delays_late_aircraft'].mean()\n\ndf['num_of_delays_late_aircraft'].replace(np.nan, avg_delay, inplace=True)\n\ndf.iloc[9]\n\n\nairport_code                                                                 IAD\nairport_name                     Washington, DC: Washington Dulles International\nmonth                                                                   February\nyear                                                                      2005.0\nnum_of_flights_total                                                       10042\nnum_of_delays_carrier                                                        284\nnum_of_delays_late_aircraft                                                631.0\nnum_of_delays_nas                                                            691\nnum_of_delays_security                                                         4\nnum_of_delays_weather                                                         28\nnum_of_delays_total                                                         1639\nminutes_delayed_carrier                                                  15573.0\nminutes_delayed_late_aircraft                                              39840\nminutes_delayed_nas                                                          NaN\nminutes_delayed_security                                                     169\nminutes_delayed_weather                                                     1359\nminutes_delayed_total                                                      78878\nName: 9, dtype: object"
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html#questiontask-2",
+    "href": "Cleansing_Projects/project2.html#questiontask-2",
+    "title": "Client Report - Late flights and missing data (JSON files)",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nWhich airport has the worst delays? Discuss the metric you chose, and why you chose it to determine the “worst” airport. Your answer should include a summary table that lists (for each airport) the total number of flights, total number of delayed flights, proportion of delayed flights, and average delay time in hours.\nFor this question, I calculated the percentage of delayed flights each airport reported and sorted the values by the highest percentage of delayed fligths in each airport. This help us see which airport one should avoid because of the probability in 100 to have your flights delayed. It is the San Francisco (SFO) one\n\n\nRead and format data\nq2 = (df.groupby('airport_code').agg(\ntotal_flights=('num_of_flights_total', 'sum'),\ndelayed_flights=('num_of_delays_total', 'sum'),\navg_delay_time=('minutes_delayed_total', 'mean')))\n\nq2['delayed_percentage'] = q2['delayed_flights'] / q2['total_flights'] *100\n\nq2 = q2.sort_values(by='delayed_percentage', ascending=False)\n\nprint(q2)\n\n\n              total_flights  delayed_flights  avg_delay_time  \\\nairport_code                                                   \nSFO                 1630945           425604   201140.098485   \nORD                 3597588           830825   426940.371212   \nATL                 4430047           902443   408969.136364   \nIAD                  851571           168467    77905.136364   \nSAN                  917862           175132    62698.848485   \nDEN                 2513974           468519   190707.431818   \nSLC                 1403384           205160    76692.204545   \n\n              delayed_percentage  \nairport_code                      \nSFO                    26.095546  \nORD                    23.093945  \nATL                    20.370958  \nIAD                    19.783083  \nSAN                    19.080428  \nDEN                    18.636589  \nSLC                    14.618950"
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html#questiontask-3",
+    "href": "Cleansing_Projects/project2.html#questiontask-3",
+    "title": "Client Report - Late flights and missing data (JSON files)",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nWhat is the best month to fly if you want to avoid delays of any length? Discuss the metric you chose and why you chose it to calculate your answer. Include one chart to help support your answer, with the x-axis ordered by month. (To answer this question, you will need to remove any rows that are missing the Month variable.)\nI dropped NaN values in month from the dataframe, and made a chart which shows the relationship between delays each month and total flights. This shows which month has the lowest percentage of delays which is September.\n\n\nRead and format data\ndf_months = df.dropna(subset=['month'])\n\nq3 = df.groupby('month').agg(\n    total_flights=('num_of_flights_total', 'sum'),\n    delayed_flights=('num_of_delays_total', 'sum')\n)\n\nq3['delayed_percentage'] = q3['delayed_flights'] / q3['total_flights']*100\n\n\nmonths_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']\nq3 = q3.reindex(months_order)\n\nq3_visual = px.bar(q3, x=q3.index, y='delayed_percentage', \n                   color='delayed_percentage',\n                   labels={'delayed_percentage': 'Delayed Percentage'},\n                   title='Proportion of Delayed Flights by Month')\nq3_visual.update_layout(xaxis_title='Month', yaxis_title='Proportion of Delayed Flights')\n\nq3_visual.show()"
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html#questiontask-4",
+    "href": "Cleansing_Projects/project2.html#questiontask-4",
+    "title": "Client Report - Late flights and missing data (JSON files)",
+    "section": "QUESTION|TASK 4",
+    "text": "QUESTION|TASK 4\nAccording to the BTS website, the “Weather” category only accounts for severe weather delays. Mild weather delays are not counted in the “Weather” category, but are actually included in both the “NAS” and “Late-Arriving Aircraft” categories. Your job is to create a new column that calculates the total number of flights delayed by weather (both severe and mild). You will need to replace all the missing values in the Late Aircraft variable with the mean. Show your work by printing the first 5 rows of data in a table. Use these three rules for your calculations:\nI successfully included both categories into one column and used the conditions to make the calculations to create that column.\n\n\nRead and format data\ndelays_mean = df['num_of_delays_late_aircraft'].mean(skipna=True)\n\ndf['num_of_delays_late_aircraft'].fillna(delays_mean, inplace=True)\n\n\n100% of delayed flights in the Weather category are due to weather\n\n\nRead and format data\ndf['num_of_delays_weather_total'] = df['num_of_delays_weather']\n\n\n30% of all delayed flights in the Late-Arriving category are due to weather.\n\n\nRead and format data\ndf['num_of_delays_weather_total'] += df['num_of_delays_late_aircraft'] * 0.3\n\n\nFrom April to August, 40% of delayed flights in the NAS category are due to weather. The rest of the months, the proportion rises to 65%.\n\n\nRead and format data\ndf.loc[df['month'].isin(['April', 'May', 'June', 'July', 'August']), 'num_of_delays_weather_total'] += df['num_of_delays_nas'] * 0.4\ndf.loc[~df['month'].isin(['April', 'May', 'June', 'July', 'August']), 'num_of_delays_weather_total'] += df['num_of_delays_nas'] * 0.65\n\nprint(df.head())\n\n\n  airport_code                                       airport_name    month  \\\n0          ATL  Atlanta, GA: Hartsfield-Jackson Atlanta Intern...  January   \n1          DEN                   Denver, CO: Denver International  January   \n2          IAD                                                NaN  January   \n3          ORD          Chicago, IL: Chicago O'Hare International  January   \n4          SAN             San Diego, CA: San Diego International  January   \n\n     year  num_of_flights_total num_of_delays_carrier  \\\n0  2005.0                 35048                  1500   \n1  2005.0                 12687                  1041   \n2  2005.0                 12381                   414   \n3  2005.0                 28194                  1197   \n4  2005.0                  7283                   572   \n\n   num_of_delays_late_aircraft  num_of_delays_nas  num_of_delays_security  \\\n0                  1109.104072               4598                      10   \n1                   928.000000                935                      11   \n2                  1058.000000                895                       4   \n3                  2255.000000               5415                       5   \n4                   680.000000                638                       7   \n\n   num_of_delays_weather  num_of_delays_total  minutes_delayed_carrier  \\\n0                    448                 8355                 116423.0   \n1                    233                 3153                  53537.0   \n2                     61                 2430                      NaN   \n3                    306                 9178                  88691.0   \n4                     56                 1952                  27436.0   \n\n   minutes_delayed_late_aircraft  minutes_delayed_nas  \\\n0                         104415             207467.0   \n1                          70301              36817.0   \n2                          70919              35660.0   \n3                         160811             364382.0   \n4                          38445              21127.0   \n\n   minutes_delayed_security  minutes_delayed_weather  minutes_delayed_total  \\\n0                       297                    36931                 465533   \n1                       363                    21779                 182797   \n2                       208                     4497                 134881   \n3                       151                    24859                 638894   \n4                       218                     4326                  91552   \n\n   num_of_delays_weather_total  \n0                  3769.431222  \n1                  1119.150000  \n2                   960.150000  \n3                  4502.250000  \n4                   674.700000"
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html#questiontask-5",
+    "href": "Cleansing_Projects/project2.html#questiontask-5",
+    "title": "Client Report - Late flights and missing data (JSON files)",
+    "section": "QUESTION|TASK 5",
+    "text": "QUESTION|TASK 5\nUsing the new weather variable calculated above, create a barplot showing the proportion of all flights that are delayed by weather at each airport. Discuss what you learn from this graph.\nFrom this barplot we see that there is a high proportion caused by weather in general. If we only used the weather condition provided, we would probably see less of a proportion thus making us feel like there is not a big relationship between common weather delays and total delays.\n\n\nRead and format data\ndf['total_weather_delays'] = df['num_of_delays_nas'] + df['num_of_delays_weather']\n\ntotal_flights = df.groupby('airport_code')['num_of_flights_total'].sum().reset_index()\n\nq5 = df.merge(total_flights, on='airport_code', how='left')\nq5['all_delayed_by_weather'] = (q5['total_weather_delays'] / total_flights['num_of_flights_total'])*100\n\n\nq5_fig = px.bar(q5, x='airport_code', y='all_delayed_by_weather',\ntitle='Proportion of Flights Delayed by Weather at Each Airport',\nlabels={'weather_delay_proportion': 'Proportion of Flights Delayed by Weather', 'airport': 'Airport'})\nq5_fig.update_xaxes(title_text='Airport')\nq5_fig.update_yaxes(title_text='Proportion of Flights Delayed by Weather')\n\nq5_fig.show()"
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html",
+    "href": "Cleansing_Projects/project5.html",
+    "title": "Client Report - The war with the Star Wars",
+    "section": "",
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html#elevator-pitch",
+    "href": "Cleansing_Projects/project5.html#elevator-pitch",
+    "title": "Client Report - The war with the Star Wars",
+    "section": "",
+    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html\n\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html#questiontask-1",
+    "href": "Cleansing_Projects/project5.html#questiontask-1",
+    "title": "Client Report - The war with the Star Wars",
+    "section": "QUESTION|TASK 1",
+    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = (df.head(1000)\n    .groupby('year')\n    .sum()\n    .reset_index()\n    .tail(10)\n    .filter([\"year\", \"AK\",\"AR\"])\n)\ndisplay(mydat)\n\n\n\n\n\n\n\nNot much of a table {#cell-Q1-table}\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html#questiontask-2",
+    "href": "Cleansing_Projects/project5.html#questiontask-2",
+    "title": "Client Report - The war with the Star Wars",
+    "section": "QUESTION|TASK 2",
+    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html#questiontask-3",
+    "href": "Cleansing_Projects/project5.html#questiontask-3",
+    "title": "Client Report - The war with the Star Wars",
+    "section": "QUESTION|TASK 3",
+    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\n# chart = px.bar(df.head(200),\n#     x=\"name\", \n#     y=\"AK\"\n# )\n# chart.show()\n\n\n\n\ntable example\n# Include and execute your code here\n# mydat = df.head(1000)\\\n#     .groupby('year')\\\n#     .sum()\\\n#     .reset_index()\\\n#     .tail(10)\\\n#     .filter([\"year\", \"AK\",\"AR\"])\n\n# display(mydat)"
   }
 ]
