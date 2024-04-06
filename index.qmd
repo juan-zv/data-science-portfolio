@@ -1,10 +1,14 @@
 ---
-title: "about me"
-subtitle: "my data science portfolio"
-# use quarto markdown to 
+title: "About Me"
+subtitle: "My Data Science Portfolio"
 ---
 
-# Title 1 Header
-## Title 2 Header
+# Data Science Portfolio
+
+## Whis is it important to have a portfolio?
+
+__Having a data science portfolio is essential for showing off your skills and experience in the field. It's like a showcase of your real-world problem-solving abilities with data, making you stand out to potential employers, clients, or collaborators. It's also a great way to track your progress and growth over time, helping you snag job opportunities and move forward in your data science career.__
+
+__This is my portfolio I want to share with anyone following my progress.__
 
 [MarkDown Basics](https://quarto.org/docs/authoring/markdown-basics.html#links-images)

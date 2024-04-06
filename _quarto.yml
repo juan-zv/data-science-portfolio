@@ -23,25 +23,23 @@ website:
         file: index.qmd
       - text: "My Resume"
         file: resume.qmd
-      - text: "Data Cleansing"
-        file: cleansing.qmd
-      - text: "Data Exploration"
-        file: exploration.qmd
-      - text: "Story Telling"
-        file: story_telling.qmd
-      - text: "Machine Learning"
-        file: ml.qmd
-      - text: "Full Stack"
-        file: full_stack.qmd
-      - text: "Competition"
-        file: competition.qmd
+      - text: "What's in a name?"
+        file: Cleansing_Projects/project1.qmd
+      - text: "Late flights and missing data (JSON files)"
+        file: Cleansing_Projects/project2.qmd
+      - text: "Finding relationships in baseball"
+        file: Cleansing_Projects/project3.qmd
+      - text: "Can you predict that?"
+        file: Cleansing_Projects/project4.qmd
+      - text: "The war with the Star Wars"
+        file: Cleansing_Projects/project5.qmd
       
   # sidebar:
   #   - title: "Data Cleansing"
   #     style: "docked"
   #     background: light
   #     contents:
-  #       - text: "Data Cleansing"
+  #       - text: "What's in a name?"
   #         file: cleansing.qmd
   #       - text: "---"
   #       - text: "Project 1"
