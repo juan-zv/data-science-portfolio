@@ -4816,47 +4816,726 @@ require(['plotly'], function(Plotly) {
   <li><a href="#questiontask-1" id="toc-questiontask-1">QUESTION|TASK 1</a></li>
   <li><a href="#questiontask-2" id="toc-questiontask-2">QUESTION|TASK 2</a></li>
   <li><a href="#questiontask-3" id="toc-questiontask-3">QUESTION|TASK 3</a></li>
+  <li><a href="#questiontask-4" id="toc-questiontask-4">QUESTION|TASK 4</a></li>
   </ul>
 </nav>
 <section id="elevator-pitch" class="level2">
 <h2 class="anchored" data-anchor-id="elevator-pitch">Elevator pitch</h2>
-<p><em>paste your elevator pitch here</em> <em>A SHORT (4-5 SENTENCES) PARAGRAPH THAT <code>DESCRIBES KEY INSIGHTS</code> TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.</em></p>
+<p><em>It is really interesting to build a machine learning model which can predict if a person makes more or less than $ 50K using data provided from a survey about Star Wars. Yes, a sruvey about Star Wars could technically predict this. This is really interesting, and I think really cool to try at least.</em></p>
 <div id="project-data" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Read and format project data</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Learn morea about Code Cells: https://quarto.org/docs/reference/cells/cells-jupyter.html</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&#39;https://github.com/fivethirtyeight/data/raw/master/star-wars-survey/StarWars.csv&#39;</span>, encoding<span class="op">=</span><span class="st">&#39;ISO-8859-1&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p><strong>Highlight the Questions and Tasks</strong></p>
 </section>
 <section id="questiontask-1" class="level2">
 <h2 class="anchored" data-anchor-id="questiontask-1">QUESTION|TASK 1</h2>
-<p><strong>COPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE</strong></p>
-<p><em>type your results and analysis here</em></p>
-<div id="q1" class="cell" data-execution_count="3">
+<p><strong>Shorten the column names and clean them up for easier use with pandas. Provide a table or list that exemplifies how you fixed the names.</strong></p>
+<div id="cell-Q1" class="cell" data-execution_count="3">
 <details class="code-fold">
-<summary>Read and format data</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>column_mapping <span class="op">=</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;RespondentID&#39;</span>: <span class="st">&#39;RespondentID&#39;</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Have you seen any of the 6 films in the Star Wars franchise?&#39;</span>: <span class="st">&#39;SeenAnyFilm&#39;</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Do you consider yourself to be a fan of the Star Wars film franchise?&#39;</span>: <span class="st">&#39;FanOfFranchise&#39;</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Which of the following Star Wars films have you seen? Please select all that apply.&#39;</span>: <span class="st">&#39;SeenFilm1&#39;</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 4&#39;</span>: <span class="st">&#39;SeenFilm2&#39;</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 5&#39;</span>: <span class="st">&#39;SeenFilm3&#39;</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 6&#39;</span>: <span class="st">&#39;SeenFilm4&#39;</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 7&#39;</span>: <span class="st">&#39;SeenFilm5&#39;</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 8&#39;</span>: <span class="st">&#39;SeenFilm6&#39;</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Please rank the Star Wars films in order of preference with 1 being your favorite film in the franchise and 6 being your least favorite film.&#39;</span>: <span class="st">&#39;RankFilm1&#39;</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 10&#39;</span>: <span class="st">&#39;RankFilm2&#39;</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 11&#39;</span>: <span class="st">&#39;RankFilm3&#39;</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 12&#39;</span>: <span class="st">&#39;RankFilm4&#39;</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 13&#39;</span>: <span class="st">&#39;RankFilm5&#39;</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 14&#39;</span>: <span class="st">&#39;RankFilm6&#39;</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Please state whether you view the following characters favorably, unfavorably, or are unfamiliar with him/her.&#39;</span>: <span class="st">&#39;HanSoloOpinion&#39;</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 16&#39;</span>: <span class="st">&#39;LukeSkywalkerOpinion&#39;</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 17&#39;</span>: <span class="st">&#39;PrincessLeiaOrganaOpinion&#39;</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 18&#39;</span>: <span class="st">&#39;AnakinSkywalkerOpinion&#39;</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 19&#39;</span>: <span class="st">&#39;ObiWanKenobiOpinion&#39;</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 20&#39;</span>: <span class="st">&#39;EmperorPalpatineOpinion&#39;</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 21&#39;</span>: <span class="st">&#39;DarthVaderOpinion&#39;</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 22&#39;</span>: <span class="st">&#39;LandoCalrissianOpinion&#39;</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 23&#39;</span>: <span class="st">&#39;BobaFettOpinion&#39;</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 24&#39;</span>: <span class="st">&#39;C-3P0Opinion&#39;</span>,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 25&#39;</span>: <span class="st">&#39;R2D2Opinion&#39;</span>,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 26&#39;</span>: <span class="st">&#39;JarJarBinksOpinion&#39;</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 27&#39;</span>: <span class="st">&#39;PadmeAmidalaOpinion&#39;</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Unnamed: 28&#39;</span>: <span class="st">&#39;YodaOpinion&#39;</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Which character shot first?&#39;</span>: <span class="st">&#39;WhoShotFirst&#39;</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Are you familiar with the Expanded Universe?&#39;</span>: <span class="st">&#39;KnowsExpandedUniverse&#39;</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Do you consider yourself to be a fan of the Expanded Universe?æ&#39;</span>: <span class="st">&#39;FanOfExpandedUniverse&#39;</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Do you consider yourself to be a fan of the Star Trek franchise?&#39;</span>: <span class="st">&#39;FanOfStarTrek&#39;</span>,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Household Income&#39;</span>: <span class="st">&#39;Income&#39;</span>,</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Location (Census Region)&#39;</span>: <span class="st">&#39;Location&#39;</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>df_cleaned <span class="op">=</span> df.rename(columns<span class="op">=</span>column_mapping)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>df_cleaned.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div id="q1" class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>Index([&#39;RespondentID&#39;, &#39;SeenAnyFilm&#39;, &#39;FanOfFranchise&#39;, &#39;SeenFilm1&#39;,
+       &#39;SeenFilm2&#39;, &#39;SeenFilm3&#39;, &#39;SeenFilm4&#39;, &#39;SeenFilm5&#39;, &#39;SeenFilm6&#39;,
+       &#39;RankFilm1&#39;, &#39;RankFilm2&#39;, &#39;RankFilm3&#39;, &#39;RankFilm4&#39;, &#39;RankFilm5&#39;,
+       &#39;RankFilm6&#39;, &#39;HanSoloOpinion&#39;, &#39;LukeSkywalkerOpinion&#39;,
+       &#39;PrincessLeiaOrganaOpinion&#39;, &#39;AnakinSkywalkerOpinion&#39;,
+       &#39;ObiWanKenobiOpinion&#39;, &#39;EmperorPalpatineOpinion&#39;, &#39;DarthVaderOpinion&#39;,
+       &#39;LandoCalrissianOpinion&#39;, &#39;BobaFettOpinion&#39;, &#39;C-3P0Opinion&#39;,
+       &#39;R2D2Opinion&#39;, &#39;JarJarBinksOpinion&#39;, &#39;PadmeAmidalaOpinion&#39;,
+       &#39;YodaOpinion&#39;, &#39;WhoShotFirst&#39;, &#39;KnowsExpandedUniverse&#39;,
+       &#39;FanOfExpandedUniverse&#39;, &#39;FanOfStarTrek&#39;, &#39;Gender&#39;, &#39;Age&#39;, &#39;Income&#39;,
+       &#39;Education&#39;, &#39;Location&#39;],
+      dtype=&#39;object&#39;)</code></pre>
 </div>
-<p><em>include figures in chunks and discuss your findings in the figure.</em></p>
-<div id="cell-Q1-chart" class="cell" data-execution_count="4">
+</div>
+</section>
+<section id="questiontask-2" class="level2">
+<h2 class="anchored" data-anchor-id="questiontask-2">QUESTION|TASK 2</h2>
+<p><strong>Clean and format the data so that it can be used in a machine learning model. As you format the data, you should complete each item listed below. In your final report provide example(s) of the reformatted data with a short description of the changes made</strong></p>
+<p><strong>Filter the dataset to respondents that have seen at least one film.</strong></p>
+<div id="cell-Q2a" class="cell" data-execution_count="4">
 <details class="code-fold">
-<summary>plot example</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> px.bar(df.head(<span class="dv">200</span>),</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">&quot;name&quot;</span>, </span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">&quot;AK&quot;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>chart.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df_filtered <span class="op">=</span> df_cleaned.query(<span class="st">&#39;SeenAnyFilm == &quot;Yes&quot;&#39;</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>df_filtered.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="q1-chart" class="cell-output cell-output-display">
-<div>                            <div id="e69b4087-19ad-43a0-bdee-b3f7771a2f40" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("e69b4087-19ad-43a0-bdee-b3f7771a2f40")) {                    Plotly.newPlot(                        "e69b4087-19ad-43a0-bdee-b3f7771a2f40",                        [{"alignmentgroup":"True","hovertemplate":"name=%{x}\u003cbr\u003eAK=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aadhya","Aadhya","Aadhya","Aadhya","Aadhya","Aadhya","Aadhya","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron"],"xaxis":"x","y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0,0.0,5.0,7.0,10.0,10.0,9.0,7.0,14.0,10.0,13.0,8.0,12.0,12.0,11.0,12.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0,0.0,0.0,5.0,7.0,0.0,0.0,0.0,0.0,6.0,6.0,9.0,8.0,17.0,26.0,37.0,23.0,33.0,42.0,41.0,35.0,53.0,54.0,52.0,55.0,59.0,54.0,54.0,62.0,61.0,58.0,60.0,44.0,56.0,57.0,55.0,35.0,42.0,30.0,35.0,33.0,29.0,24.0,25.0,22.0,29.0,22.0,10.0],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"name"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"AK"}},"legend":{"tracegroupgap":0},"barmode":"relative"},                        {"responsive": true}                    ).then(function(){
+<div id="q2a" class="cell-output cell-output-display" data-execution_count="4">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">RespondentID</th>
+<th data-quarto-table-cell-role="th">SeenAnyFilm</th>
+<th data-quarto-table-cell-role="th">FanOfFranchise</th>
+<th data-quarto-table-cell-role="th">SeenFilm1</th>
+<th data-quarto-table-cell-role="th">SeenFilm2</th>
+<th data-quarto-table-cell-role="th">SeenFilm3</th>
+<th data-quarto-table-cell-role="th">SeenFilm4</th>
+<th data-quarto-table-cell-role="th">SeenFilm5</th>
+<th data-quarto-table-cell-role="th">SeenFilm6</th>
+<th data-quarto-table-cell-role="th">RankFilm1</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">YodaOpinion</th>
+<th data-quarto-table-cell-role="th">WhoShotFirst</th>
+<th data-quarto-table-cell-role="th">KnowsExpandedUniverse</th>
+<th data-quarto-table-cell-role="th">FanOfExpandedUniverse</th>
+<th data-quarto-table-cell-role="th">FanOfStarTrek</th>
+<th data-quarto-table-cell-role="th">Gender</th>
+<th data-quarto-table-cell-role="th">Age</th>
+<th data-quarto-table-cell-role="th">Income</th>
+<th data-quarto-table-cell-role="th">Education</th>
+<th data-quarto-table-cell-role="th">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>3.292880e+09</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Star Wars: Episode I The Phantom Menace</td>
+<td>Star Wars: Episode II Attack of the Clones</td>
+<td>Star Wars: Episode III Revenge of the Sith</td>
+<td>Star Wars: Episode IV A New Hope</td>
+<td>Star Wars: Episode V The Empire Strikes Back</td>
+<td>Star Wars: Episode VI Return of the Jedi</td>
+<td>3</td>
+<td>...</td>
+<td>Very favorably</td>
+<td>I don&#39;t understand this question</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Male</td>
+<td>18-29</td>
+<td>NaN</td>
+<td>High school degree</td>
+<td>South Atlantic</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>3.292765e+09</td>
+<td>Yes</td>
+<td>No</td>
+<td>Star Wars: Episode I The Phantom Menace</td>
+<td>Star Wars: Episode II Attack of the Clones</td>
+<td>Star Wars: Episode III Revenge of the Sith</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1</td>
+<td>...</td>
+<td>Unfamiliar (N/A)</td>
+<td>I don&#39;t understand this question</td>
+<td>No</td>
+<td>NaN</td>
+<td>No</td>
+<td>Male</td>
+<td>18-29</td>
+<td>$0 - $24,999</td>
+<td>High school degree</td>
+<td>West North Central</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>3.292763e+09</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Star Wars: Episode I The Phantom Menace</td>
+<td>Star Wars: Episode II Attack of the Clones</td>
+<td>Star Wars: Episode III Revenge of the Sith</td>
+<td>Star Wars: Episode IV A New Hope</td>
+<td>Star Wars: Episode V The Empire Strikes Back</td>
+<td>Star Wars: Episode VI Return of the Jedi</td>
+<td>5</td>
+<td>...</td>
+<td>Very favorably</td>
+<td>I don&#39;t understand this question</td>
+<td>No</td>
+<td>NaN</td>
+<td>Yes</td>
+<td>Male</td>
+<td>18-29</td>
+<td>$100,000 - $149,999</td>
+<td>Some college or Associate degree</td>
+<td>West North Central</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>3.292731e+09</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Star Wars: Episode I The Phantom Menace</td>
+<td>Star Wars: Episode II Attack of the Clones</td>
+<td>Star Wars: Episode III Revenge of the Sith</td>
+<td>Star Wars: Episode IV A New Hope</td>
+<td>Star Wars: Episode V The Empire Strikes Back</td>
+<td>Star Wars: Episode VI Return of the Jedi</td>
+<td>5</td>
+<td>...</td>
+<td>Somewhat favorably</td>
+<td>Greedo</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Male</td>
+<td>18-29</td>
+<td>$100,000 - $149,999</td>
+<td>Some college or Associate degree</td>
+<td>West North Central</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>3.292719e+09</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Star Wars: Episode I The Phantom Menace</td>
+<td>Star Wars: Episode II Attack of the Clones</td>
+<td>Star Wars: Episode III Revenge of the Sith</td>
+<td>Star Wars: Episode IV A New Hope</td>
+<td>Star Wars: Episode V The Empire Strikes Back</td>
+<td>Star Wars: Episode VI Return of the Jedi</td>
+<td>1</td>
+<td>...</td>
+<td>Very favorably</td>
+<td>Han</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Male</td>
+<td>18-29</td>
+<td>$25,000 - $49,999</td>
+<td>Bachelor degree</td>
+<td>Middle Atlantic</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 38 columns</p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Create a new column that converts the age ranges to a single number. Drop the age range categorical column.</strong></p>
+<div id="cell-Q2b" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>age_mapping <span class="op">=</span> {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;18-29&#39;</span>: <span class="dv">1</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;30-44&#39;</span>: <span class="dv">2</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;45-60&#39;</span>: <span class="dv">3</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;&gt; 60&#39;</span>: <span class="dv">4</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>df_filtered[<span class="st">&#39;AgeGroup&#39;</span>] <span class="op">=</span> df_filtered[<span class="st">&#39;Age&#39;</span>].<span class="bu">map</span>(age_mapping)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>df_filtered <span class="op">=</span> df_filtered.drop(columns<span class="op">=</span>[<span class="st">&#39;Age&#39;</span>])</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>df_filtered.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="q2b" class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>Index([&#39;RespondentID&#39;, &#39;SeenAnyFilm&#39;, &#39;FanOfFranchise&#39;, &#39;SeenFilm1&#39;,
+       &#39;SeenFilm2&#39;, &#39;SeenFilm3&#39;, &#39;SeenFilm4&#39;, &#39;SeenFilm5&#39;, &#39;SeenFilm6&#39;,
+       &#39;RankFilm1&#39;, &#39;RankFilm2&#39;, &#39;RankFilm3&#39;, &#39;RankFilm4&#39;, &#39;RankFilm5&#39;,
+       &#39;RankFilm6&#39;, &#39;HanSoloOpinion&#39;, &#39;LukeSkywalkerOpinion&#39;,
+       &#39;PrincessLeiaOrganaOpinion&#39;, &#39;AnakinSkywalkerOpinion&#39;,
+       &#39;ObiWanKenobiOpinion&#39;, &#39;EmperorPalpatineOpinion&#39;, &#39;DarthVaderOpinion&#39;,
+       &#39;LandoCalrissianOpinion&#39;, &#39;BobaFettOpinion&#39;, &#39;C-3P0Opinion&#39;,
+       &#39;R2D2Opinion&#39;, &#39;JarJarBinksOpinion&#39;, &#39;PadmeAmidalaOpinion&#39;,
+       &#39;YodaOpinion&#39;, &#39;WhoShotFirst&#39;, &#39;KnowsExpandedUniverse&#39;,
+       &#39;FanOfExpandedUniverse&#39;, &#39;FanOfStarTrek&#39;, &#39;Gender&#39;, &#39;Income&#39;,
+       &#39;Education&#39;, &#39;Location&#39;, &#39;AgeGroup&#39;],
+      dtype=&#39;object&#39;)</code></pre>
+</div>
+</div>
+<p><strong>Create a new column that converts the education groupings to a single number. Drop the school categorical column</strong></p>
+<div id="cell-Q2c" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>education_mapping <span class="op">=</span> {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Less than high school degree&#39;</span>: <span class="dv">1</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;High school degree&#39;</span>: <span class="dv">2</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Some college or Associate degree&#39;</span>: <span class="dv">3</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Bachelor degree&#39;</span>: <span class="dv">4</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Graduate degree&#39;</span>: <span class="dv">5</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>df_filtered[<span class="st">&#39;EducationGroup&#39;</span>] <span class="op">=</span> df_filtered[<span class="st">&#39;Education&#39;</span>].<span class="bu">map</span>(education_mapping)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>df_filtered <span class="op">=</span> df_filtered.drop(columns<span class="op">=</span>[<span class="st">&#39;Education&#39;</span>])</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>df_filtered.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="q2c" class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>Index([&#39;RespondentID&#39;, &#39;SeenAnyFilm&#39;, &#39;FanOfFranchise&#39;, &#39;SeenFilm1&#39;,
+       &#39;SeenFilm2&#39;, &#39;SeenFilm3&#39;, &#39;SeenFilm4&#39;, &#39;SeenFilm5&#39;, &#39;SeenFilm6&#39;,
+       &#39;RankFilm1&#39;, &#39;RankFilm2&#39;, &#39;RankFilm3&#39;, &#39;RankFilm4&#39;, &#39;RankFilm5&#39;,
+       &#39;RankFilm6&#39;, &#39;HanSoloOpinion&#39;, &#39;LukeSkywalkerOpinion&#39;,
+       &#39;PrincessLeiaOrganaOpinion&#39;, &#39;AnakinSkywalkerOpinion&#39;,
+       &#39;ObiWanKenobiOpinion&#39;, &#39;EmperorPalpatineOpinion&#39;, &#39;DarthVaderOpinion&#39;,
+       &#39;LandoCalrissianOpinion&#39;, &#39;BobaFettOpinion&#39;, &#39;C-3P0Opinion&#39;,
+       &#39;R2D2Opinion&#39;, &#39;JarJarBinksOpinion&#39;, &#39;PadmeAmidalaOpinion&#39;,
+       &#39;YodaOpinion&#39;, &#39;WhoShotFirst&#39;, &#39;KnowsExpandedUniverse&#39;,
+       &#39;FanOfExpandedUniverse&#39;, &#39;FanOfStarTrek&#39;, &#39;Gender&#39;, &#39;Income&#39;,
+       &#39;Location&#39;, &#39;AgeGroup&#39;, &#39;EducationGroup&#39;],
+      dtype=&#39;object&#39;)</code></pre>
+</div>
+</div>
+<p><strong>Create a new column that converts the income ranges to a single number. Drop the income range categorical column.</strong></p>
+<div id="cell-Q2d" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>income_mapping <span class="op">=</span> {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;$0 - $24,999&#39;</span>: <span class="dv">1</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;$25,000 - $49,999&#39;</span>: <span class="dv">2</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;$50,000 - $99,999&#39;</span>: <span class="dv">3</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;$100,000 - $149,999&#39;</span>: <span class="dv">4</span>,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;$150,000+&#39;</span>: <span class="dv">5</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>df_filtered[<span class="st">&#39;IncomeGroup&#39;</span>] <span class="op">=</span> df_filtered[<span class="st">&#39;Income&#39;</span>].<span class="bu">map</span>(income_mapping)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>df_filtered <span class="op">=</span> df_filtered.drop(columns<span class="op">=</span>[<span class="st">&#39;Income&#39;</span>])</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>df_filtered.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="q2d" class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>Index([&#39;RespondentID&#39;, &#39;SeenAnyFilm&#39;, &#39;FanOfFranchise&#39;, &#39;SeenFilm1&#39;,
+       &#39;SeenFilm2&#39;, &#39;SeenFilm3&#39;, &#39;SeenFilm4&#39;, &#39;SeenFilm5&#39;, &#39;SeenFilm6&#39;,
+       &#39;RankFilm1&#39;, &#39;RankFilm2&#39;, &#39;RankFilm3&#39;, &#39;RankFilm4&#39;, &#39;RankFilm5&#39;,
+       &#39;RankFilm6&#39;, &#39;HanSoloOpinion&#39;, &#39;LukeSkywalkerOpinion&#39;,
+       &#39;PrincessLeiaOrganaOpinion&#39;, &#39;AnakinSkywalkerOpinion&#39;,
+       &#39;ObiWanKenobiOpinion&#39;, &#39;EmperorPalpatineOpinion&#39;, &#39;DarthVaderOpinion&#39;,
+       &#39;LandoCalrissianOpinion&#39;, &#39;BobaFettOpinion&#39;, &#39;C-3P0Opinion&#39;,
+       &#39;R2D2Opinion&#39;, &#39;JarJarBinksOpinion&#39;, &#39;PadmeAmidalaOpinion&#39;,
+       &#39;YodaOpinion&#39;, &#39;WhoShotFirst&#39;, &#39;KnowsExpandedUniverse&#39;,
+       &#39;FanOfExpandedUniverse&#39;, &#39;FanOfStarTrek&#39;, &#39;Gender&#39;, &#39;Location&#39;,
+       &#39;AgeGroup&#39;, &#39;EducationGroup&#39;, &#39;IncomeGroup&#39;],
+      dtype=&#39;object&#39;)</code></pre>
+</div>
+</div>
+<p><strong>Create your target (also known as “y” or “label”) column based on the new income range column.</strong></p>
+<div id="cell-Q2e" class="cell" data-execution_count="8">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df_filtered[<span class="st">&#39;Target&#39;</span>] <span class="op">=</span> (df_filtered[<span class="st">&#39;IncomeGroup&#39;</span>] <span class="op">&gt;</span> <span class="dv">2</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>df_filtered.columns</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>df_filtered.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="q2e" class="cell-output cell-output-display" data-execution_count="8">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">RespondentID</th>
+<th data-quarto-table-cell-role="th">SeenAnyFilm</th>
+<th data-quarto-table-cell-role="th">FanOfFranchise</th>
+<th data-quarto-table-cell-role="th">SeenFilm1</th>
+<th data-quarto-table-cell-role="th">SeenFilm2</th>
+<th data-quarto-table-cell-role="th">SeenFilm3</th>
+<th data-quarto-table-cell-role="th">SeenFilm4</th>
+<th data-quarto-table-cell-role="th">SeenFilm5</th>
+<th data-quarto-table-cell-role="th">SeenFilm6</th>
+<th data-quarto-table-cell-role="th">RankFilm1</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">WhoShotFirst</th>
+<th data-quarto-table-cell-role="th">KnowsExpandedUniverse</th>
+<th data-quarto-table-cell-role="th">FanOfExpandedUniverse</th>
+<th data-quarto-table-cell-role="th">FanOfStarTrek</th>
+<th data-quarto-table-cell-role="th">Gender</th>
+<th data-quarto-table-cell-role="th">Location</th>
+<th data-quarto-table-cell-role="th">AgeGroup</th>
+<th data-quarto-table-cell-role="th">EducationGroup</th>
+<th data-quarto-table-cell-role="th">IncomeGroup</th>
+<th data-quarto-table-cell-role="th">Target</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>3.292880e+09</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Star Wars: Episode I The Phantom Menace</td>
+<td>Star Wars: Episode II Attack of the Clones</td>
+<td>Star Wars: Episode III Revenge of the Sith</td>
+<td>Star Wars: Episode IV A New Hope</td>
+<td>Star Wars: Episode V The Empire Strikes Back</td>
+<td>Star Wars: Episode VI Return of the Jedi</td>
+<td>3</td>
+<td>...</td>
+<td>I don&#39;t understand this question</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Male</td>
+<td>South Atlantic</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>NaN</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>3.292765e+09</td>
+<td>Yes</td>
+<td>No</td>
+<td>Star Wars: Episode I The Phantom Menace</td>
+<td>Star Wars: Episode II Attack of the Clones</td>
+<td>Star Wars: Episode III Revenge of the Sith</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1</td>
+<td>...</td>
+<td>I don&#39;t understand this question</td>
+<td>No</td>
+<td>NaN</td>
+<td>No</td>
+<td>Male</td>
+<td>West North Central</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>3.292763e+09</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Star Wars: Episode I The Phantom Menace</td>
+<td>Star Wars: Episode II Attack of the Clones</td>
+<td>Star Wars: Episode III Revenge of the Sith</td>
+<td>Star Wars: Episode IV A New Hope</td>
+<td>Star Wars: Episode V The Empire Strikes Back</td>
+<td>Star Wars: Episode VI Return of the Jedi</td>
+<td>5</td>
+<td>...</td>
+<td>I don&#39;t understand this question</td>
+<td>No</td>
+<td>NaN</td>
+<td>Yes</td>
+<td>Male</td>
+<td>West North Central</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>3.292731e+09</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Star Wars: Episode I The Phantom Menace</td>
+<td>Star Wars: Episode II Attack of the Clones</td>
+<td>Star Wars: Episode III Revenge of the Sith</td>
+<td>Star Wars: Episode IV A New Hope</td>
+<td>Star Wars: Episode V The Empire Strikes Back</td>
+<td>Star Wars: Episode VI Return of the Jedi</td>
+<td>5</td>
+<td>...</td>
+<td>Greedo</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Male</td>
+<td>West North Central</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>3.292719e+09</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Star Wars: Episode I The Phantom Menace</td>
+<td>Star Wars: Episode II Attack of the Clones</td>
+<td>Star Wars: Episode III Revenge of the Sith</td>
+<td>Star Wars: Episode IV A New Hope</td>
+<td>Star Wars: Episode V The Empire Strikes Back</td>
+<td>Star Wars: Episode VI Return of the Jedi</td>
+<td>1</td>
+<td>...</td>
+<td>Han</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Male</td>
+<td>Middle Atlantic</td>
+<td>1.0</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 39 columns</p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>One-hot encode all remaining categorical columns.</strong></p>
+<p>::: {#cell-Q2f Get Dummies .cell execution_count=9}</p>
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df_filtered_ohe <span class="op">=</span> pd.get_dummies(df_filtered)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>df_filtered_ohe.columns.tolist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="q2f-get-dummies" class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>[&#39;RespondentID&#39;,
+ &#39;AgeGroup&#39;,
+ &#39;EducationGroup&#39;,
+ &#39;IncomeGroup&#39;,
+ &#39;Target&#39;,
+ &#39;SeenAnyFilm_Yes&#39;,
+ &#39;FanOfFranchise_No&#39;,
+ &#39;FanOfFranchise_Yes&#39;,
+ &#39;SeenFilm1_Star Wars: Episode I  The Phantom Menace&#39;,
+ &#39;SeenFilm2_Star Wars: Episode II  Attack of the Clones&#39;,
+ &#39;SeenFilm3_Star Wars: Episode III  Revenge of the Sith&#39;,
+ &#39;SeenFilm4_Star Wars: Episode IV  A New Hope&#39;,
+ &#39;SeenFilm5_Star Wars: Episode V The Empire Strikes Back&#39;,
+ &#39;SeenFilm6_Star Wars: Episode VI Return of the Jedi&#39;,
+ &#39;RankFilm1_1&#39;,
+ &#39;RankFilm1_2&#39;,
+ &#39;RankFilm1_3&#39;,
+ &#39;RankFilm1_4&#39;,
+ &#39;RankFilm1_5&#39;,
+ &#39;RankFilm1_6&#39;,
+ &#39;RankFilm2_1&#39;,
+ &#39;RankFilm2_2&#39;,
+ &#39;RankFilm2_3&#39;,
+ &#39;RankFilm2_4&#39;,
+ &#39;RankFilm2_5&#39;,
+ &#39;RankFilm2_6&#39;,
+ &#39;RankFilm3_1&#39;,
+ &#39;RankFilm3_2&#39;,
+ &#39;RankFilm3_3&#39;,
+ &#39;RankFilm3_4&#39;,
+ &#39;RankFilm3_5&#39;,
+ &#39;RankFilm3_6&#39;,
+ &#39;RankFilm4_1&#39;,
+ &#39;RankFilm4_2&#39;,
+ &#39;RankFilm4_3&#39;,
+ &#39;RankFilm4_4&#39;,
+ &#39;RankFilm4_5&#39;,
+ &#39;RankFilm4_6&#39;,
+ &#39;RankFilm5_1&#39;,
+ &#39;RankFilm5_2&#39;,
+ &#39;RankFilm5_3&#39;,
+ &#39;RankFilm5_4&#39;,
+ &#39;RankFilm5_5&#39;,
+ &#39;RankFilm5_6&#39;,
+ &#39;RankFilm6_1&#39;,
+ &#39;RankFilm6_2&#39;,
+ &#39;RankFilm6_3&#39;,
+ &#39;RankFilm6_4&#39;,
+ &#39;RankFilm6_5&#39;,
+ &#39;RankFilm6_6&#39;,
+ &#39;HanSoloOpinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;HanSoloOpinion_Somewhat favorably&#39;,
+ &#39;HanSoloOpinion_Somewhat unfavorably&#39;,
+ &#39;HanSoloOpinion_Unfamiliar (N/A)&#39;,
+ &#39;HanSoloOpinion_Very favorably&#39;,
+ &#39;HanSoloOpinion_Very unfavorably&#39;,
+ &#39;LukeSkywalkerOpinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;LukeSkywalkerOpinion_Somewhat favorably&#39;,
+ &#39;LukeSkywalkerOpinion_Somewhat unfavorably&#39;,
+ &#39;LukeSkywalkerOpinion_Unfamiliar (N/A)&#39;,
+ &#39;LukeSkywalkerOpinion_Very favorably&#39;,
+ &#39;LukeSkywalkerOpinion_Very unfavorably&#39;,
+ &#39;PrincessLeiaOrganaOpinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;PrincessLeiaOrganaOpinion_Somewhat favorably&#39;,
+ &#39;PrincessLeiaOrganaOpinion_Somewhat unfavorably&#39;,
+ &#39;PrincessLeiaOrganaOpinion_Unfamiliar (N/A)&#39;,
+ &#39;PrincessLeiaOrganaOpinion_Very favorably&#39;,
+ &#39;PrincessLeiaOrganaOpinion_Very unfavorably&#39;,
+ &#39;AnakinSkywalkerOpinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;AnakinSkywalkerOpinion_Somewhat favorably&#39;,
+ &#39;AnakinSkywalkerOpinion_Somewhat unfavorably&#39;,
+ &#39;AnakinSkywalkerOpinion_Unfamiliar (N/A)&#39;,
+ &#39;AnakinSkywalkerOpinion_Very favorably&#39;,
+ &#39;AnakinSkywalkerOpinion_Very unfavorably&#39;,
+ &#39;ObiWanKenobiOpinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;ObiWanKenobiOpinion_Somewhat favorably&#39;,
+ &#39;ObiWanKenobiOpinion_Somewhat unfavorably&#39;,
+ &#39;ObiWanKenobiOpinion_Unfamiliar (N/A)&#39;,
+ &#39;ObiWanKenobiOpinion_Very favorably&#39;,
+ &#39;ObiWanKenobiOpinion_Very unfavorably&#39;,
+ &#39;EmperorPalpatineOpinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;EmperorPalpatineOpinion_Somewhat favorably&#39;,
+ &#39;EmperorPalpatineOpinion_Somewhat unfavorably&#39;,
+ &#39;EmperorPalpatineOpinion_Unfamiliar (N/A)&#39;,
+ &#39;EmperorPalpatineOpinion_Very favorably&#39;,
+ &#39;EmperorPalpatineOpinion_Very unfavorably&#39;,
+ &#39;DarthVaderOpinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;DarthVaderOpinion_Somewhat favorably&#39;,
+ &#39;DarthVaderOpinion_Somewhat unfavorably&#39;,
+ &#39;DarthVaderOpinion_Unfamiliar (N/A)&#39;,
+ &#39;DarthVaderOpinion_Very favorably&#39;,
+ &#39;DarthVaderOpinion_Very unfavorably&#39;,
+ &#39;LandoCalrissianOpinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;LandoCalrissianOpinion_Somewhat favorably&#39;,
+ &#39;LandoCalrissianOpinion_Somewhat unfavorably&#39;,
+ &#39;LandoCalrissianOpinion_Unfamiliar (N/A)&#39;,
+ &#39;LandoCalrissianOpinion_Very favorably&#39;,
+ &#39;LandoCalrissianOpinion_Very unfavorably&#39;,
+ &#39;BobaFettOpinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;BobaFettOpinion_Somewhat favorably&#39;,
+ &#39;BobaFettOpinion_Somewhat unfavorably&#39;,
+ &#39;BobaFettOpinion_Unfamiliar (N/A)&#39;,
+ &#39;BobaFettOpinion_Very favorably&#39;,
+ &#39;BobaFettOpinion_Very unfavorably&#39;,
+ &#39;C-3P0Opinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;C-3P0Opinion_Somewhat favorably&#39;,
+ &#39;C-3P0Opinion_Somewhat unfavorably&#39;,
+ &#39;C-3P0Opinion_Unfamiliar (N/A)&#39;,
+ &#39;C-3P0Opinion_Very favorably&#39;,
+ &#39;C-3P0Opinion_Very unfavorably&#39;,
+ &#39;R2D2Opinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;R2D2Opinion_Somewhat favorably&#39;,
+ &#39;R2D2Opinion_Somewhat unfavorably&#39;,
+ &#39;R2D2Opinion_Unfamiliar (N/A)&#39;,
+ &#39;R2D2Opinion_Very favorably&#39;,
+ &#39;R2D2Opinion_Very unfavorably&#39;,
+ &#39;JarJarBinksOpinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;JarJarBinksOpinion_Somewhat favorably&#39;,
+ &#39;JarJarBinksOpinion_Somewhat unfavorably&#39;,
+ &#39;JarJarBinksOpinion_Unfamiliar (N/A)&#39;,
+ &#39;JarJarBinksOpinion_Very favorably&#39;,
+ &#39;JarJarBinksOpinion_Very unfavorably&#39;,
+ &#39;PadmeAmidalaOpinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;PadmeAmidalaOpinion_Somewhat favorably&#39;,
+ &#39;PadmeAmidalaOpinion_Somewhat unfavorably&#39;,
+ &#39;PadmeAmidalaOpinion_Unfamiliar (N/A)&#39;,
+ &#39;PadmeAmidalaOpinion_Very favorably&#39;,
+ &#39;PadmeAmidalaOpinion_Very unfavorably&#39;,
+ &#39;YodaOpinion_Neither favorably nor unfavorably (neutral)&#39;,
+ &#39;YodaOpinion_Somewhat favorably&#39;,
+ &#39;YodaOpinion_Somewhat unfavorably&#39;,
+ &#39;YodaOpinion_Unfamiliar (N/A)&#39;,
+ &#39;YodaOpinion_Very favorably&#39;,
+ &#39;YodaOpinion_Very unfavorably&#39;,
+ &#39;WhoShotFirst_Greedo&#39;,
+ &#39;WhoShotFirst_Han&#39;,
+ &quot;WhoShotFirst_I don&#39;t understand this question&quot;,
+ &#39;KnowsExpandedUniverse_No&#39;,
+ &#39;KnowsExpandedUniverse_Yes&#39;,
+ &#39;FanOfExpandedUniverse_No&#39;,
+ &#39;FanOfExpandedUniverse_Yes&#39;,
+ &#39;FanOfStarTrek_No&#39;,
+ &#39;FanOfStarTrek_Yes&#39;,
+ &#39;Gender_Female&#39;,
+ &#39;Gender_Male&#39;,
+ &#39;Location_East North Central&#39;,
+ &#39;Location_East South Central&#39;,
+ &#39;Location_Middle Atlantic&#39;,
+ &#39;Location_Mountain&#39;,
+ &#39;Location_New England&#39;,
+ &#39;Location_Pacific&#39;,
+ &#39;Location_South Atlantic&#39;,
+ &#39;Location_West North Central&#39;,
+ &#39;Location_West South Central&#39;]</code></pre>
+</div>
+<p>:::</p>
+</section>
+<section id="questiontask-3" class="level2">
+<h2 class="anchored" data-anchor-id="questiontask-3">QUESTION|TASK 3</h2>
+<p><strong>Validate that the data provided on GitHub lines up with the article by recreating 2 of the visuals from the article.</strong></p>
+<div id="q3" class="cell" data-execution_count="10">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#SeenFilm</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>HasSeenMoviesPercent <span class="op">=</span> [<span class="bu">round</span>(df_filtered[<span class="st">&#39;SeenFilm1&#39;</span>].count() <span class="op">/</span> <span class="dv">835</span>, <span class="dv">2</span>) <span class="op">*</span> <span class="dv">100</span>, </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>                        <span class="bu">round</span>(df_filtered[<span class="st">&#39;SeenFilm2&#39;</span>].count() <span class="op">/</span> <span class="dv">835</span>, <span class="dv">2</span>) <span class="op">*</span> <span class="dv">100</span>, </span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>                        <span class="bu">round</span>(df_filtered[<span class="st">&#39;SeenFilm3&#39;</span>].count() <span class="op">/</span> <span class="dv">835</span>, <span class="dv">2</span>) <span class="op">*</span> <span class="dv">100</span>, </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>                        <span class="bu">round</span>(df_filtered[<span class="st">&#39;SeenFilm4&#39;</span>].count() <span class="op">/</span> <span class="dv">835</span>, <span class="dv">2</span>) <span class="op">*</span> <span class="dv">100</span>, </span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>                        <span class="bu">round</span>(df_filtered[<span class="st">&#39;SeenFilm5&#39;</span>].count() <span class="op">/</span> <span class="dv">835</span>, <span class="dv">2</span>) <span class="op">*</span> <span class="dv">100</span>, </span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>                        <span class="bu">round</span>(df_filtered[<span class="st">&#39;SeenFilm6&#39;</span>].count() <span class="op">/</span> <span class="dv">835</span>, <span class="dv">2</span>) <span class="op">*</span> <span class="dv">100</span>]</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>fig_1 <span class="op">=</span> px.bar(x<span class="op">=</span>HasSeenMoviesPercent,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>               y<span class="op">=</span>[<span class="st">&#39;Star Wars: Episode I The Phantom Menace&#39;</span>,</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>                <span class="st">&#39;Star Wars: Episode II Attack of the Clone&#39;</span>,</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>                <span class="st">&#39;Star Wars: Episode III Revenge of the Sith&#39;</span>,</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>                <span class="st">&#39;Star Wars: Episode IV A New Hope&#39;</span>,</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>                <span class="st">&#39;Star Wars: Episode V The Empire Strikes Back&#39;</span>,</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>                <span class="st">&#39;Star Wars: Episode VI Return of the Jedi&#39;</span>],</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>                  text<span class="op">=</span>HasSeenMoviesPercent,</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>                  title<span class="op">=</span><span class="st">&quot;Which &#39;Star Wars&#39; Movies Have You Seen? (Of 835 respondents)&quot;</span>,</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>               )</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>fig_1.show()</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="co"># WhoShotFirst</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>hanShotFirst <span class="op">=</span> [<span class="bu">round</span>(df_filtered_ohe[<span class="st">&#39;WhoShotFirst_Han&#39;</span>].<span class="bu">sum</span>() <span class="op">/</span> <span class="dv">834</span>, <span class="dv">2</span>) <span class="op">*</span> <span class="dv">100</span>,</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>                <span class="bu">round</span>(df_filtered_ohe[<span class="st">&#39;WhoShotFirst_Greedo&#39;</span>].<span class="bu">sum</span>() <span class="op">/</span> <span class="dv">834</span>, <span class="dv">2</span>) <span class="op">*</span> <span class="dv">100</span>,</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>                <span class="bu">round</span>(df_filtered_ohe[<span class="st">&quot;WhoShotFirst_I don&#39;t understand this question&quot;</span>].<span class="bu">sum</span>() <span class="op">/</span> <span class="dv">834</span>, <span class="dv">2</span>) <span class="op">*</span> <span class="dv">100</span>]</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>fig_2 <span class="op">=</span> px.bar(x<span class="op">=</span>hanShotFirst, </span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>               y<span class="op">=</span>[<span class="st">&#39;Han&#39;</span>, <span class="st">&#39;Greedo&#39;</span>, <span class="st">&#39;I dont understand this question&#39;</span>],</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>               title<span class="op">=</span><span class="st">&quot;Who Shot First? (According to 834 respondents)&quot;</span>,</span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>               text<span class="op">=</span>hanShotFirst)</span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>fig_2.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="q3-1" class="cell-output cell-output-display">
+<div>                            <div id="38d06538-2120-4a86-bbba-d8e52a184730" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("38d06538-2120-4a86-bbba-d8e52a184730")) {                    Plotly.newPlot(                        "38d06538-2120-4a86-bbba-d8e52a184730",                        [{"alignmentgroup":"True","hovertemplate":"x=%{x}\u003cbr\u003ey=%{y}\u003cbr\u003etext=%{text}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"text":[81.0,68.0,66.0,73.0,91.0,88.0],"textposition":"auto","x":[81.0,68.0,66.0,73.0,91.0,88.0],"xaxis":"x","y":["Star Wars: Episode I The Phantom Menace","Star Wars: Episode II Attack of the Clone","Star Wars: Episode III Revenge of the Sith","Star Wars: Episode IV A New Hope","Star Wars: Episode V The Empire Strikes Back","Star Wars: Episode VI Return of the Jedi"],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"x"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"y"}},"legend":{"tracegroupgap":0},"title":{"text":"Which 'Star Wars' Movies Have You Seen? (Of 835 respondents)"},"barmode":"relative"},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('e69b4087-19ad-43a0-bdee-b3f7771a2f40');
+var gd = document.getElementById('38d06538-2120-4a86-bbba-d8e52a184730');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -4879,178 +5558,81 @@ if (outputEl) {{
 }}
 
                         })                };                });            </script>        </div>
-<p>My useless chart</p>
 </div>
-</div>
-<div class="cell tbl-cap-location-top" data-execution_count="5">
-<details class="code-fold">
-<summary>table example</summary>
-<div class="sourceCode cell-code" id="cb4" data-cap-location="top"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>mydat <span class="op">=</span> (df.head(<span class="dv">1000</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">&#39;year&#39;</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">sum</span>()</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    .reset_index()</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    .tail(<span class="dv">10</span>)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>([<span class="st">&quot;year&quot;</span>, <span class="st">&quot;AK&quot;</span>,<span class="st">&quot;AR&quot;</span>])</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>display(mydat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div id="q1-table" class="cell-output cell-output-display">
-<div>
-<div>
+<div id="q3-2" class="cell-output cell-output-display">
+<div>                            <div id="09668af1-45c7-401d-9bdb-a677d06ab6e5" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("09668af1-45c7-401d-9bdb-a677d06ab6e5")) {                    Plotly.newPlot(                        "09668af1-45c7-401d-9bdb-a677d06ab6e5",                        [{"alignmentgroup":"True","hovertemplate":"x=%{x}\u003cbr\u003ey=%{y}\u003cbr\u003etext=%{text}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"text":[39.0,24.0,37.0],"textposition":"auto","x":[39.0,24.0,37.0],"xaxis":"x","y":["Han","Greedo","I dont understand this question"],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"x"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"y"}},"legend":{"tracegroupgap":0},"title":{"text":"Who Shot First? (According to 834 respondents)"},"barmode":"relative"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('09668af1-45c7-401d-9bdb-a677d06ab6e5');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
 
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<caption>Not much of a table {#cell-Q1-table}</caption>
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">year</th>
-<th data-quarto-table-cell-role="th">AK</th>
-<th data-quarto-table-cell-role="th">AR</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">96</td>
-<td>2006</td>
-<td>21.0</td>
-<td>183.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">97</td>
-<td>2007</td>
-<td>28.0</td>
-<td>153.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">98</td>
-<td>2008</td>
-<td>36.0</td>
-<td>212.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">99</td>
-<td>2009</td>
-<td>34.0</td>
-<td>179.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">100</td>
-<td>2010</td>
-<td>22.0</td>
-<td>196.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">101</td>
-<td>2011</td>
-<td>41.0</td>
-<td>148.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">102</td>
-<td>2012</td>
-<td>28.0</td>
-<td>140.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">103</td>
-<td>2013</td>
-<td>26.0</td>
-<td>134.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">104</td>
-<td>2014</td>
-<td>20.0</td>
-<td>114.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">105</td>
-<td>2015</td>
-<td>28.0</td>
-<td>121.0</td>
-</tr>
-</tbody>
-</table>
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
 
-</div>
-</div>
+                        })                };                });            </script>        </div>
 </div>
 </div>
 </section>
-<section id="questiontask-2" class="level2">
-<h2 class="anchored" data-anchor-id="questiontask-2">QUESTION|TASK 2</h2>
-<p><strong>COPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE</strong></p>
-<p><em>type your results and analysis here</em></p>
-<div id="q2" class="cell" data-execution_count="6">
+<section id="questiontask-4" class="level2">
+<h2 class="anchored" data-anchor-id="questiontask-4">QUESTION|TASK 4</h2>
+<p><strong>Build a machine learning model that predicts whether a person makes more than $50k. Describe your model and report the accuracy.</strong></p>
+<p><em>I used a DTC and a RFC to try to predict if a person taking the survey earns more than $50K. Unfortunately, the accuracy scores were not high enough to confirm that any of the model can predict this information. The accuracy score for the DTC is 0.60 or 60%, and the score for the RTC is 0.59 or 59%. These scores show that the models can predict right only that percentage of cases. Even though it is more than 50% and someone could say it can work, I also came to the conclusion that the data provided is not sufficently related with the income.</em></p>
+<div id="cell-Q4" class="cell" data-execution_count="11">
 <details class="code-fold">
-<summary>Read and format data</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.tree <span class="im">import</span> DecisionTreeClassifier</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> accuracy_score</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>features <span class="op">=</span> df_filtered_ohe.columns</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>features <span class="op">=</span> features.drop(<span class="st">&#39;Target&#39;</span>)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>features <span class="op">=</span> features.drop(<span class="st">&#39;IncomeGroup&#39;</span>)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df_filtered_ohe[features]</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df_filtered_ohe[<span class="st">&#39;Target&#39;</span>]</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.3</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Decision Tree Classifier</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>dt_classifier <span class="op">=</span> DecisionTreeClassifier()</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>dt_classifier <span class="op">=</span> dt_classifier.fit(X_train, y_train)</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> dt_classifier.predict(X_test)</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>dt_classifier_accuracy <span class="op">=</span> accuracy_score(y_test, y_pred)</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Random Forest Classifier</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>rf_classifier <span class="op">=</span> RandomForestClassifier()</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>rf_classifier.fit(X_train, y_train)</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>y_pred_rf <span class="op">=</span> rf_classifier.predict(X_test)</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>rf_classifier_accuracy <span class="op">=</span> accuracy_score(y_test, y_pred_rf)</span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>(dt_classifier_accuracy, rf_classifier_accuracy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div id="q4" class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>(0.5836298932384342, 0.5800711743772242)</code></pre>
 </div>
-<p><em>include figures in chunks and discuss your findings in the figure.</em></p>
-<div id="q2-chart" class="cell" data-execution_count="7">
-<details class="code-fold">
-<summary>plot example</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># chart = px.bar(df.head(200),</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#     x=&quot;name&quot;, </span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#     y=&quot;AK&quot;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># chart.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="q2-table" class="cell tbl-cap-location-top" data-tbl-cap="Not much of a table" data-execution_count="8">
-<details class="code-fold">
-<summary>table example</summary>
-<div class="sourceCode cell-code" id="cb7" data-cap-location="top"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mydat = df.head(1000)\</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#     .groupby(&#39;year&#39;)\</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#     .sum()\</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#     .reset_index()\</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#     .tail(10)\</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     .filter([&quot;year&quot;, &quot;AK&quot;,&quot;AR&quot;])</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># display(mydat)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-</section>
-<section id="questiontask-3" class="level2">
-<h2 class="anchored" data-anchor-id="questiontask-3">QUESTION|TASK 3</h2>
-<p><strong>COPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE</strong></p>
-<p><em>type your results and analysis here</em></p>
-<div id="q3" class="cell" data-execution_count="9">
-<details class="code-fold">
-<summary>Read and format data</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p><em>include figures in chunks and discuss your findings in the figure.</em></p>
-<div id="q3-chart" class="cell" data-execution_count="10">
-<details class="code-fold">
-<summary>plot example</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># chart = px.bar(df.head(200),</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#     x=&quot;name&quot;, </span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#     y=&quot;AK&quot;</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># chart.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="q3-table" class="cell tbl-cap-location-top" data-tbl-cap="Not much of a table" data-execution_count="11">
-<details class="code-fold">
-<summary>table example</summary>
-<div class="sourceCode cell-code" id="cb10" data-cap-location="top"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mydat = df.head(1000)\</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#     .groupby(&#39;year&#39;)\</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">#     .sum()\</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">#     .reset_index()\</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">#     .tail(10)\</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     .filter([&quot;year&quot;, &quot;AK&quot;,&quot;AR&quot;])</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co"># display(mydat)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 
 
