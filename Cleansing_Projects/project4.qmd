@@ -98,6 +98,7 @@ _I chose to use a Decision Tree Classifier, and a Random Forest Classifier which
 #| label: Q2
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
 
 # Columns to drop to prepare training and test data
 features_to_drop = ['parcel', 'abstrprd', 'before1980', 'yrbuilt']
