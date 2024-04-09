@@ -96,7 +96,7 @@ _I chose to use a Decision Tree Classifier, and a Random Forest Classifier which
 
 ```{python}
 #| label: Q2
-
+from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
 # Columns to drop to prepare training and test data
