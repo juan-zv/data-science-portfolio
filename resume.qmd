@@ -2,10 +2,10 @@
 Computer Science Student at Brigham Young University - Idaho | Online TA for WDD 230
 
 <div id="webaddress">
-<a href="mailto:juanzurita@byui.edu">juanzurita@byui.edu</a>
-| <a href="https://github.com/juan-zv">My GitHub page</a>
+    <a href="mailto:juanzurita@byui.edu">juanzurita@byui.edu</a> | 
+    <a href="https://github.com/juan-zv">My GitHub page</a> | 
+    <a href="https://www.linkedin.com/in/juanzuritavasquez/">My LinkedIn page</a>
 </div>
-
 
 
 ## Currently
@@ -13,10 +13,9 @@ Computer Science Student at Brigham Young University - Idaho | Online TA for WDD
 **Online Teacher Assistant for WDD 230**  
 Rexburg, ID | Brigham Young University-Idaho    `Apr 2023-Present`
 
-- Provide guidance and support to students in a web development class focused on HTML, CSS, and JavaScript.
-- Demonstrate proficiency in creating responsive, well-designed, and interactive web pages using HTML, CSS, and JavaScript.
-- Assist students in understanding and implementing web development concepts, troubleshoot coding issues, and contribute to a collaborative learning environment.
-
+- Provided guidance and support to 20+ students in web development using HTML, CSS, and JavaScript.
+- Guided students to achieve proficiency in creating responsive, well-designed, and interactive web pages using HTML, CSS, and JavaScript.
+- Assisted students in understanding and implementing web development concepts, troubleshoot coding issues, and contribute to a collaborative learning environment.
 
 
 ## Education
@@ -24,29 +23,25 @@ Rexburg, ID | Brigham Young University-Idaho    `Apr 2023-Present`
 **Brigham Young University-Idaho**  
 Rexburg, ID  
 Bachelor of Science Computer Science  
-Expected Graduation Date: __Dec 2025__
-
-- Coursework: Web Frontend I, Introduction to Databases, Applied Programming, etc.
+Expected Graduation Date: __Apr 2026__
+- 	Relevant Coursework: Web Frontend I, Data Science Programming, Applied Programming, etc.
 - OOP, Database handling, Optimization, Web Development.
-- GPA __3.65/4.0__
+- GPA __3.78/4.0__
 
 **Certificate of Computer Programming**    `Aug 2023`
-
 - Coursework: Algorithm Design, Data Structures, Object Oriented Programming, Work Methodology.
-- Certificate designed to specifically prepare students for an internship or full-time position.
-- Emphasis in Science and Technology.
-
+- Emphasis in Software Development as a service while being part of a team.
 
 
 ## Experience
 
-
 **International Services Processor**  
 Rexburg, ID | Brigham Young University-Idaho    `Nov 2022-Aug 2023`
 
-- Efficiently handle walk-ins, phone calls, and emails, providing information and directing visitors to appropriate departments.
-- Assist students with administrative processes and immigration-related questions, offering guidance and facilitating necessary paperwork.
-- Maintain organized records, schedule appointments, and perform general administrative tasks with attention to detail and multitasking abilities.
+- Efficiently handled walk-ins, phone calls, and emails, providing information and directing students to appropriate departments.
+- Assisted students with administrative processes and immigration-related questions, offering guidance and facilitating necessary paperwork.
+- Maintained organized records, schedule appointments, and perform general administrative tasks with attention to detail and multitasking abilities.
+
 
 ### Volunteer Service
 
@@ -54,10 +49,9 @@ Rexburg, ID | Brigham Young University-Idaho    `Nov 2022-Aug 2023`
 Santa Cruz, Bolivia | The Church of Jesus Christ of Latter-day Saints    `Jan 2020-Jan 2022`
 
 - Taught English as a second language for groups of 5-10 people.
-- Planned flights and trips for other volunteers as an executive secretary for the Mission.
-- Conducted weekly training meetings to establish goals in order to fulfill working requisites.
+- Served as an executive secretary, coordinating travel and logistics for volunteers.
+- Conducted training and goal-setting sessions, enhancing the effectiveness of volunteer efforts.
 - Led and trained other volunteers as trainer, district leader, zone leader.
-
 
 
 ## Personal Projects
@@ -66,13 +60,18 @@ Santa Cruz, Bolivia | The Church of Jesus Christ of Latter-day Saints    `Jan 20
 - **U&I Ride**: Mobile app concept aimed at optimizing ride-sharing services in the Rexburg – Utah area.
 - **Estudio + Fe**: Web application focused on enhancing scripture cross-referencing and note-taking capabilities for a wider audience.
 
+
 ## Skills and Interests
 
-- Proficient in SCRUM methodologies and Git version control.
-- Skilled in Firebase, Flutter, React, and React Native for backend, mobile, and web development.
-- Experienced in C#, Python, SQL, Kotlin, Android development.
-- Familiar with Rust for systems programming.
-- Currently learning Sass for CSS preprocessing, and iOS development.
+### Programming Languages
+- Proficient in: Python, C#, JavaScript.
+- Familiar with: Dart, Kotlin, Swift, Rust.
+### Web and Mobile Development
+- Experienced in: SCSS, Firebase, Flutter, React, and React Native.
+- Familiar with: Android Studio and XCode.
+### Tools and Technologies
+- Skilled in SCRUM, Git, Web and Mobile layout design.
+
 
 
 

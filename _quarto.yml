@@ -19,8 +19,6 @@ website:
     background: primary
     search: true   
     right:
-      - text: "My Resume"
-        file: resume.qmd
       - text: "What's in a name?"
         file: Cleansing_Projects/project1.qmd
       - text: "Late flights and missing data (JSON files)"
@@ -31,6 +29,8 @@ website:
         file: Cleansing_Projects/project4.qmd
       - text: "The war with the Star Wars"
         file: Cleansing_Projects/project5.qmd
+      - text: "My Resume"
+        file: resume.qmd
       
   # sidebar:
   #   - title: "Data Cleansing"
