@@ -11,3 +11,5 @@ This portfolio is a compilation of projects that I have worked on using well-kno
 - **Jupyter Notebook**: Data analysis and visualization.
 - **YAML**: Configuration files for Jupyter Notebook and HTML rendering.
 - **Quarto**: Markdown files.
+
+##[Link to my data science portfolio](https://juan-zv.github.io/data-science-portfolio/)
